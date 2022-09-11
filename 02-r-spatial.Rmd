@@ -1,0 +1,232 @@
+---
+title: "Ecosistema(s) espacial(es) de R"
+output: 
+  html_document:
+    code_download: true
+    highlight: tango
+---
+
+R tiene un ecosistema muy potente para poder realizar tareas de geocomputación, 
+entre las que podemos mencionar:
+
+* Análisis exploratorio de datos (EDA)
+* Procesamiento de datos 
+* Transformación de datos (p. ej., cambio de proyección, cálculos)
+* Visualización de datos (no solo por medio de mapas)
+* Desarrollo de aplicaciones web
+* Desarrollo de software, en forma de funciones o paquetesd (por ejemplo, para compartir nuevos métodos)
+
+::: {.alert .alert-info}
+El libro [Geocomputación con R](https://geocompr.github.io/es/) es una muy buena guía para ver en detalle muchas de estas tareas.
+:::
+
+
+Hay muchas maneras de manejar datos geográficos en R, con muchos paquetes en el área. Entre ellos se encuentran:
+
+* [{sf}](https://github.com/r-spatial/sf), [{sp}](https://github.com/edzer/sp), [{terra}](https://github.com/rspatial/terra), [{raster}](https://github.com/rspatial/raster), [{stars}](https://github.com/r-spatial/stars) - clases espaciales
+* [{dplyr}](https://github.com/tidyverse/dplyr), [{rmapshaper}](https://github.com/ateucher/rmapshaper) - procesamiento de tablas de atributos/geometrías
+* [{rnaturalearth}](https://docs.ropensci.org/rnaturalearth/), [{osmdata}](https://docs.ropensci.org/osmdata/), [{rsat}](https://docs.ropensci.org/rsat/), [{MODISTools}](https://docs.ropensci.org/MODISTools/)- descarga de datos espaciales
+* [{rgrass}](https://github.com/rsbivand/rgrass), [{qgisprocess}](https://github.com/paleolimbot/qgisprocess), [{rgee}](https://github.com/r-spatial/rgee) - conexión con otros software de Sistemas de Información Geográfico
+* [{gstat}](https://github.com/r-spatial/gstat), [{mlr3}](https://github.com/mlr-org/mlr3), [{CAST}](https://github.com/HannaMeyer/CAST) - modelado de datos espaciales
+* [{rasterVis}](https://github.com/oscarperpinan/rastervis), [{tmap}](https://github.com/mtennekes/tmap), [{ggplot2}](https://github.com/tidyverse/ggplot2) - visualizaciones estáticas
+* [{leaflet}](https://github.com/rstudio/leaflet), [{mapview}](https://github.com/r-spatial/mapview), [{mapdeck}](https://github.com/SymbolixAU/mapdeck) - visualizaciones interactivas
+* [{spatstat}](http://spatstat.org/), [{spdep}](https://github.com/r-spatial/spdep), [{spatialreg}](https://github.com/r-spatial/spatialreg), [{dismo}](https://github.com/rspatial/dismo), [{landscapemetrics}](https://github.com/r-spatialecology/landscapemetrics), [{RStoolbox}](http://bleutner.github.io/RStoolbox/rstbx-docu/RStoolbox.html), [{rayshader}](https://github.com/tylermorganwall/rayshader), [{gdalcubes}](https://github.com/appelmar/gdalcubes_R), [{sfnetworks}](https://github.com/luukvdmeer/sfnetworks), [{metR}](https://github.com/eliocamp/metR) - diferentes tipos de análisis de datos espaciales
+
+y muchos, muchos paquetes más. 
+
+::: {.alert .alert-info}
+En la vista _Spatial_ de CRAN https://cran.r-project.org/view=Spatial se cuenta con una visión general de las diferentes tareas espaciales que se pueden resolver con R.
+:::
+
+## Tipos de datos
+
+Para trabajar con datos especiales, en general, representamos la información de dos maneras:
+
+* Vectores: la realidad se representa utilizando puntos, líneas o polígonos.
+
+* Raster: la información se representa por medio de grillas o píxeles.
+
+En R contamos con diferentes paquetes para poder trabajar con estos dos formatos.  Vamos a ver unos ejemplos con datos vectoriales.
+
+## Datos vectoriales
+
+Los datos vectoriales se pueden acceder como cualquier otro dato en R:
+
+* podemos leerlos desde un archivo en nuestra computadora.
+
+* podemos cargarlos con un paquete y utilizarlos.
+
+Vamos a trabajar con ambos métodos.
+
+
+### Leyendo datos de un archivo
+
+Existen muchas funciones distintas para leer datos dependiendo del formato en el que están guardados.
+Para datos tabulares, la forma más útil es el formato csv, que es un archivo de texto plano con datos separados por coma.
+
+Para importar datos hace falta escribir el código correspondiente pero también podés aprovechar el entorno gráfico de RStudio:
+
+::: {.alert .alert-secondary}
+File → Import Dataset → From Text (readr)...
+:::
+
+Esto te va abrir una ventana donde podrás elegir el archivo a importar (en este caso el archivo `estaciones_smn.csv` que está dentro de la capeta `datos` del proyecto) y otros detalles.
+
+```{r, echo=FALSE, fig.alt = "Diálogo de importar datos de RStudio."}
+knitr::include_graphics("img/leer_csv.png")
+```
+
+En la pantalla principal vas a poder previsualizar los datos.
+Abajo a la izquierda tenés varias opciones: el nombre que vas a usar para la variable (en este caso llamaremos `estaciones_smn`), si la primera fila contiene los nombres de las columnas (`First Row as Names`), qué delimitador tienen los datos (en este caso `comma`, pero podría ser punto y coma u otro), etc...
+
+Y abajo a la derecha es el código que vas a necesitar para efectivamente importar los datos.
+Podrías apretar el botón "Import" para leer los datos pero si bien es posible, al mismo tiempo esas líneas de código no se guardan en ningún lado y entonces nuestro trabajo luego no se puede reproducir.
+Por eso, te proponemos que copies ese código, cierres esa ventana con el botón "Cancel", y pegues el código en el archivo donde estés trabajando.
+Cuando lo ejecutes, se va a generar la variable `estaciones_smn` con los datos.
+
+```{r}
+library(readr)
+
+estaciones_smn <- read_csv("datos/estaciones_smn.csv") 
+```
+
+::: {.alert .alert-success}
+**Nota**: Notá que en este caso el código para leer los datos consta de dos líneas.
+La primera carga el paquete **readr** y el segundo usa la función `read_csv()` (del paquete readr) para leer el archivo .csv.
+No es necesario cargar el paquete cada vez que vas a leer un archivo, pero asegurate de incluir esta línea en el primer bloque de código de tu archivo.
+:::
+
+
+::: {.alert .alert-success}
+**Nota**: La interfaz de usuario de RStudio sirve para autogenerar el código que lee el archivo.
+Una vez que lo tenés, no necesitás abrirla de nuevo.
+:::
+
+Todo ese texto naranja/rojo es intimidante pero no te preocupes, es sólo un mensaje que nos informa que los datos se leyeron y qué tipo de dato tiene cada columna.
+Podemos explorar la estructura de la variable `estaciones_smn` usando la función `str()` (de *structure* en inglés).
+
+```{r}
+str(estaciones_smn)
+```
+
+Esto nos dice un montón.
+La primera línea dice que es una `tibble`, que es un caso especial de la estructura de datos tabular básica de R llamada `data.frame`.
+Tiene `r nrow(estaciones_smn)` filas (las **observaciones**) y `r ncol(estaciones_smn)` columnas (o **variables** que describen las observaciones).
+Las siguientes líneas nos dicen los nombres de las columnas (`r knitr::combine_words(colnames(estaciones_smn), and = "y ")`), su tipo de dato (`chr` o `num`), la longitud (`r paste0("[1:", nrow(estaciones_smn), "]")`) y sus primeros elementos.
+
+Podemos ver que esta tabla tiene dos variables que indican la latitud y longitud de cada fila.  En este caso estamos ante un tipo de dato vectorial de puntos.
+
+Para poder graficarlos vamos a utilizar el paquete {ggplot2} que permite generar gráficos de gran calidad en pocos pasos.  Pero antes de graficar, veamos otra manera de leer datos vectoriales.
+
+### Usando un paquete: Natural Earth, datos del mundo.
+
+{rnaturalearth} es un paquete de R para mantener y facilitar la interacción con los datos de los mapas vectoriales de la [tierra natural](http://www.naturalearthdata.com/) un conjunto de datos cartográficos de dominio público que incluye vectores de países y otras fronteras administrativas.
+
+Es muy útil para confeccionar mapas base, por ejemplo, para graficar el mapa de Argentina y sus países limítrofes cargamos los datos con `ne_countries()`:
+
+```{r}
+library(rnaturalearth)
+
+mapa <- ne_countries(country = c("argentina", "chile", "uruguay", 
+                                                "paraguay", "brazil", "bolivia", 
+                                                "falkland islands"), 
+                                    returnclass = "sf")
+```
+
+El argumento `country` es un vector con los países que necesitamos. El argumento `returnclass` hace referencia a la estructura que queremos que devuelva. En este caso, `returnclass = "sf"` hace que devuelva un objeto de clase "Simple Features". Este tipo de dato también se pueden graficar con {ggplot2}.
+
+Veamos el contenido de mapa
+
+```{r}
+str(mapa)
+```
+Vemos que tiene muchas más variables, hacia el final de los datos podemos ver que se indica que hay una clase _"MULTIPOLYGON"_ 
+
+
+## Graficando
+
+Ahora si veamos como podemos generar un mapa con los puntos y los polígonos que obtuvimos en los pasos anteriors.
+
+Cualquier gráfico de ggplot tendrá como mínimo 3 componentes: los **datos**, un **sistema de coordenadas** y una **geometría** (la representación visual de los datos) y se irá construyendo por capas.
+
+## Primera capa: el área del gráfico
+
+La función principal de {ggplot2} es justamente `ggplot()` que permite *iniciar* el gráfico y además definir las características *globales*.
+El primer argumento de esta función serán los datos que vas a visualizar, siempre en un data frame.
+En este caso usamos `estaciones_smn`.
+
+El segundo argumento se llama "mapping" (*mapeo* en inglés). 
+Este argumento define la relación entre cada columna del data frame y los distintos parámetros gráficos. Por ejemplo, qué columna va a representar el eje x, cuál va a ser el eje y, etc. 
+Este mapeo se hace **siempre** con la función `aes()` (que viene de *aesthetics*, *estética* en inglés). 
+
+Por ejemplo, si queremos hacer un gráfico que muestre la ubicación de las estaciones usarías algo como esto:
+
+```{r}
+library(ggplot2)
+ggplot(data = estaciones_smn, mapping = aes(x = lon, y = lat))
+```
+
+Este código le indica a ggplot que genere un gráfico donde el eje **x** se mapea a la columna `lon` y el eje **y**, a la columna `lat`. 
+Pero, como se ve, esto sólo genera el área del gráfico y los ejes. 
+Lo que falta es indicar con qué geometrías representar los datos.
+
+
+## Segunda capa: geometrías
+
+
+Para agregar geometrías que representen los datos lo que hay que hacer es *sumar* el resultado de una función que devuelva una capa de geometrías. 
+Estas suelen ser funciones que empiezan con "geom_" y luego el nombre de la geometría (en inglés). 
+Para representar los datos usando puntos, hay que uasr `geom_point()`
+
+```{r}
+
+ggplot(data = estaciones_smn, mapping = aes(x = lon, y = lat)) +
+  geom_point()  
+```
+
+¡Nuestro primer gráfico!
+
+Ahora veamos como se grafican los polígonos teniendo en cuenta lo que aprendimos recien. Los datos de los polígonos están en `mapa` y sabemos que es del tipo sf, asi que buscamos una geometría que nos permita graficar ese tipo de datos, de esta manera: 
+
+```{r}
+ggplot(mapa) +
+  geom_sf()
+```
+
+Por defecto, el mapa se dibuja con un fondo gris, pero el problema es que ese fondo puede tapar los datos de puntos de las estaciones. Para para dibujar sólo los contornos hay que modificar la geometría un poco:
+
+```{r}
+ggplot(mapa) +
+  geom_sf(fill = NA, color = "black", size = 0.2)
+  
+```
+
+Ahora vamos a juntar los dos mapas: el de puntos y el de polígonos
+
+
+```{r}
+ggplot(mapa) +
+  geom_sf(fill = NA, color = "black", size = 0.2) +
+  geom_point(data = estaciones_smn, mapping = aes(lon, lat)) 
+
+```
+Finalmente, podemos restringir el área del mapa para que se muestre solo donde hay datos:
+
+```{r}
+ggplot(mapa) +
+  geom_sf(fill = NA, color = "black", size = 0.2) +
+  geom_point(data = estaciones_smn, mapping = aes(lon, lat)) +
+  coord_sf(ylim = c(-55, -20), xlim = c(-80, -50))
+
+```
+
+::: {.alert .alert-info}
+**Desafío**
+
+Intentá replicar este mismo mapa pero con los datos que están en el archivo _estaciones_siga.csv_ dentro de la carpeta datos del proyecto.
+
+:::
+
+
+
+
