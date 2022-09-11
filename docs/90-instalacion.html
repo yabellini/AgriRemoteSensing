@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>90-instalacion.knit</title>
+
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Sensoramiento remoto con R aplicado a la agricultura</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Temas
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="01-introduction.html">Flujo de trabajo reproducible</a>
+    </li>
+    <li>
+      <a href="02-r-spatial.html">Ecosistema espacial</a>
+    </li>
+    <li>
+      <a href="03-tareas_basicas.html">Tareas básicas</a>
+    </li>
+    <li>
+      <a href="04-clasificacion_supervisada.html">Clasificación supervisada</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/yabellini/curso_rgee">Repo</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+
+<div id="instalando-r-y-rstudio" class="section level1">
+<h1>Instalando R y RStudio</h1>
+<p>En esta sección presentamos instrucciones de instalación de R y
+RStudio para Windows y derivados de Ubuntu. Notá que dado que tanto R
+como RStudio publican nuevas versiones periódicamente, es posible que
+estas instrucciones queden desactualizadas con el tiempo.</p>
+<div id="instalando-r" class="section level2 unnumbered">
+<h2 class="unnumbered">Instalando R</h2>
+<div id="windows" class="section level3 unnumbered">
+<h3 class="unnumbered">Windows</h3>
+<ol style="list-style-type: decimal">
+<li><p>Entrá a <a href="https://cran.r-project.org/bin/windows/base/"
+class="uri">https://cran.r-project.org/bin/windows/base/</a> y bajate el
+instalador haciendo click en el link grandote que dice “Download R x.x.x
+for Windows”.</p></li>
+<li><p>Una vez que se bajó, hacé doble click en el archivo y seguí las
+instrucciones del instalador.</p></li>
+</ol>
+<p>Una vez que se termine de instalar, te va a aparecer un ícono como
+este en el escritorio o en los programas instalados: <img
+src="img/r-logo.jpeg" height="20" alt="Logo de R" />.</p>
+<p>Al ejecutarlo, les tiene que aparecer algo como esto:</p>
+<p><img src="img/r-en-windows.png" title="Captura de la consola de R en windows." alt="Captura de la consola de R en windows." width="396" /></p>
+<p>Si ves una ventana así significa que ya tenés instalado R, pero seguí
+leyendo! <strong>Todavía falta unos pasos</strong> para poder sacarle
+todo el jugo.</p>
+<p>Para instalar algunos paquetes de R vas a necesitar instalar un
+programa adicional llamado rtools.</p>
+<ol style="list-style-type: decimal">
+<li><p>Entrá a <a href="https://cran.r-project.org/bin/windows/Rtools/"
+class="uri">https://cran.r-project.org/bin/windows/Rtools/</a> y
+descargate el instalador en donde dice “On Windows 64-bit:
+rtoolsxx-x86_64.exe (recommended: includes both i386 and x64
+compilers)”</p></li>
+<li><p>Abrí la consola de R, poné esto y apretá enter:</p></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">writeLines</span>(<span class="st">&#39;PATH=&quot;${RTOOLS40_HOME}</span><span class="sc">\\</span><span class="st">usr</span><span class="sc">\\</span><span class="st">bin;${PATH}&quot;&#39;</span>, <span class="at">con =</span> <span class="st">&quot;~/.Renviron&quot;</span>)</span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Finalmente, para chequear que todo esté bien, cerrá R, volvé a
+abrirlo, escribí esto en la cosola y apretá enter:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.which</span>(<span class="st">&quot;make&quot;</span>)</span></code></pre></div>
+<p>Debería salir algo como esto:</p>
+<pre><code>##                               make 
+## &quot;C:\\rtools40\\usr\\bin\\make.exe&quot;</code></pre>
+</div>
+<div id="ubuntu-o-derivados" class="section level3 unnumbered">
+<h3 class="unnumbered">Ubuntu o derivados</h3>
+<p>Para tener la última versión, tenés que agregar los repositorios de
+CRAN. Para hacerlo, vas a tener que tener permisos de administrador. Los
+detalles están en <a
+href="https://cran.r-project.org/bin/linux/ubuntu/">esta</a> página,
+pero el resumen es:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="at">-qq</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="at">--no-install-recommends</span> software-properties-common dirmngr</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-key adv <span class="at">--keyserver</span> keyserver.ubuntu.com <span class="at">--recv-keys</span> E298A3A825C0D65DFD57CBB651716619E084DAB9</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> add-apt-repository <span class="st">&quot;deb https://cloud.r-project.org/bin/linux/ubuntu </span><span class="va">$(</span><span class="ex">lsb_release</span> <span class="at">-cs</span><span class="va">)</span><span class="st">-cran40/&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sudo apt install r-base r-base-dev</span></code></pre></div>
+<p>Si todo salió bien, tenés que tener instalado R en tu máquina y podés
+ejecutarlo con el comando <code>R</code> en la consola.</p>
+<p><img src="img/r-terminal.png" title="Terminal de linux corriendo R." alt="Terminal de linux corriendo R." width="504" /></p>
+</div>
+<div id="mac" class="section level3 unnumbered">
+<h3 class="unnumbered">Mac</h3>
+<ol style="list-style-type: decimal">
+<li><p>Ir a CRAN: <a href="https://cran.r-project.org"
+class="uri">https://cran.r-project.org</a></p></li>
+<li><p>Hacer click en el link <em>“Download R for (Mac) OS
+X”.</em></p></li>
+<li><p>Descarga el paquete correspondiente a tu sistema
+operativo.</p></li>
+<li><p>Ejecuta el paquete.</p></li>
+</ol>
+</div>
+</div>
+<div id="instalando-rstudio" class="section level2 unnumbered">
+<h2 class="unnumbered">Instalando RStudio</h2>
+<p>Andá a <a
+href="https://www.rstudio.com/products/rstudio/download/#download"
+class="uri">https://www.rstudio.com/products/rstudio/download/#download</a>.
+Abajo de todo está el listado de instaladores para cada plataforma;
+descargá la que corresponda a tu sistema operativo.</p>
+<p><img src="img/rstudio-descarga.png" title="Página de descarga de RStudio." alt="Página de descarga de RStudio." width="584" /></p>
+<div id="windows-1" class="section level3 unnumbered">
+<h3 class="unnumbered">Windows</h3>
+<p>Como siempre, doble click en el archivo y seguir los pasos de
+instalación.</p>
+</div>
+<div id="ubuntu-o-derivados-1" class="section level3 unnumbered">
+<h3 class="unnumbered">Ubuntu o derivados</h3>
+<p>Si tenés instalada una interfaz gráfica para instalar archivos .deb,
+ejecutando el archivo que descargaste ya vas a poder instalar RStudio.
+Si no, abrí una terminal en el directorio donde bajaste el archivo y
+ejecutá</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> ARCHIVO</span></code></pre></div>
+<p>Reemplazando ARCHIVO por el nombre del archivo instalador.</p>
+<p>Es posible que salte algún error por falta de alguna dependencia, en
+ese caso usá</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get <span class="at">-f</span> install</span></code></pre></div>
+<p>Y debería estar arreglado.</p>
+<p>Una vez instalado, al ejecutar RStudio les tiene que aparecer una
+ventana como esta:</p>
+<p><img src="img/rstudio-principal.png" title="Pantalla principal de RStudio." alt="Pantalla principal de RStudio." width="725" /></p>
+</div>
+<div id="mac-1" class="section level3 unnumbered">
+<h3 class="unnumbered">Mac</h3>
+<ol start="2" style="list-style-type: decimal">
+<li>Descarga e instala RStudio: <a href="https://www.rstudio.com"
+class="uri">https://www.rstudio.com</a></li>
+</ol>
+<p>La primera vez que abrimos RStudio nos ofrece instalar las
+herramientas de XCode para línea de comandos. Aceptamos haciendo clic en
+instalar.</p>
+</div>
+</div>
+</div>
+
+<div id="rmd-source-code">LS0tDQpvdXRwdXQ6IA0KICBodG1sX2RvY3VtZW50Og0KICAgIGNvZGVfZG93bmxvYWQ6IHRydWUNCiAgICBoaWdobGlnaHQ6IHRhbmdvDQotLS0NCiMgSW5zdGFsYW5kbyBSIHkgUlN0dWRpbw0KDQpFbiBlc3RhIHNlY2Npw7NuIHByZXNlbnRhbW9zIGluc3RydWNjaW9uZXMgZGUgaW5zdGFsYWNpw7NuIGRlIFIgeSBSU3R1ZGlvIHBhcmEgV2luZG93cyB5IGRlcml2YWRvcyBkZSBVYnVudHUuIA0KTm90w6EgcXVlIGRhZG8gcXVlIHRhbnRvIFIgY29tbyBSU3R1ZGlvIHB1YmxpY2FuIG51ZXZhcyB2ZXJzaW9uZXMgcGVyacOzZGljYW1lbnRlLCBlcyBwb3NpYmxlIHF1ZSBlc3RhcyBpbnN0cnVjY2lvbmVzIHF1ZWRlbiBkZXNhY3R1YWxpemFkYXMgY29uIGVsIHRpZW1wby4gDQoNCiMjIEluc3RhbGFuZG8gUiB7LX0NCg0KIyMjIFdpbmRvd3Mgey19DQoNCjEuIEVudHLDoSBhIGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL2Jpbi93aW5kb3dzL2Jhc2UvIHkgYmFqYXRlIGVsIGluc3RhbGFkb3IgaGFjaWVuZG8gY2xpY2sgZW4gZWwgbGluayBncmFuZG90ZSBxdWUgZGljZSDigJxEb3dubG9hZCBSIHgueC54IGZvciBXaW5kb3dz4oCdLiANCg0KDQoyLiBVbmEgdmV6IHF1ZSBzZSBiYWrDsywgaGFjw6kgZG9ibGUgY2xpY2sgZW4gZWwgYXJjaGl2byB5IHNlZ3XDrSBsYXMgaW5zdHJ1Y2Npb25lcyBkZWwgaW5zdGFsYWRvci4NCg0KVW5hIHZleiBxdWUgc2UgdGVybWluZSBkZSBpbnN0YWxhciwgdGUgdmEgYSBhcGFyZWNlciB1biDDrWNvbm8gY29tbyBlc3RlIGVuIGVsIGVzY3JpdG9yaW8gbyBlbiBsb3MgcHJvZ3JhbWFzIGluc3RhbGFkb3M6ICFbTG9nbyBkZSBSXShpbWcvci1sb2dvLmpwZWcpe2hlaWdodD0yMHB4fS4NCg0KQWwgZWplY3V0YXJsbywgbGVzIHRpZW5lIHF1ZSBhcGFyZWNlciBhbGdvIGNvbW8gZXN0bzogDQoNCmBgYHtyLCBlY2hvPUZBTFNFLCBmaWcuYWx0ID0gIkNhcHR1cmEgZGUgbGEgY29uc29sYSBkZSBSIGVuIHdpbmRvd3MuIn0NCmtuaXRyOjppbmNsdWRlX2dyYXBoaWNzKCJpbWcvci1lbi13aW5kb3dzLnBuZyIpDQpgYGANCg0KU2kgdmVzIHVuYSB2ZW50YW5hIGFzw60gc2lnbmlmaWNhIHF1ZSB5YSB0ZW7DqXMgaW5zdGFsYWRvIFIsIHBlcm8gc2VndcOtIGxleWVuZG8hIA0KKipUb2RhdsOtYSBmYWx0YSB1bm9zIHBhc29zKiogcGFyYSBwb2RlciBzYWNhcmxlIHRvZG8gZWwganVnby4NCg0KUGFyYSBpbnN0YWxhciBhbGd1bm9zIHBhcXVldGVzIGRlIFIgdmFzIGEgbmVjZXNpdGFyIGluc3RhbGFyIHVuIHByb2dyYW1hIGFkaWNpb25hbCBsbGFtYWRvIHJ0b29scy4gDQoNCjEuIEVudHLDoSBhIGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL2Jpbi93aW5kb3dzL1J0b29scy8geSBkZXNjYXJnYXRlIGVsIGluc3RhbGFkb3IgZW4gZG9uZGUgZGljZSAiT24gV2luZG93cyA2NC1iaXQ6ICBydG9vbHN4eC14ODZfNjQuZXhlIChyZWNvbW1lbmRlZDogaW5jbHVkZXMgYm90aCBpMzg2IGFuZCB4NjQgY29tcGlsZXJzKSINCg0KMi4gQWJyw60gbGEgY29uc29sYSBkZSBSLCBwb27DqSBlc3RvIHkgYXByZXTDoSBlbnRlcjoNCg0KYGBge3IsIGV2YWwgPSBGQUxTRX0NCndyaXRlTGluZXMoJ1BBVEg9IiR7UlRPT0xTNDBfSE9NRX1cXHVzclxcYmluOyR7UEFUSH0iJywgY29uID0gIn4vLlJlbnZpcm9uIikNCmBgYA0KDQozLiBGaW5hbG1lbnRlLCBwYXJhIGNoZXF1ZWFyIHF1ZSB0b2RvIGVzdMOpIGJpZW4sIGNlcnLDoSBSLCB2b2x2w6kgYSBhYnJpcmxvLCBlc2NyaWLDrSBlc3RvIGVuIGxhIGNvc29sYSB5IGFwcmV0w6EgZW50ZXI6DQoNCmBgYHtyLCBldmFsID0gRkFMU0V9DQpTeXMud2hpY2goIm1ha2UiKQ0KYGBgDQoNCkRlYmVyw61hIHNhbGlyIGFsZ28gY29tbyBlc3RvOg0KYGBge3IsIGVjaG89RkFMU0V9DQpjKG1ha2UgPSAiQzpcXHJ0b29sczQwXFx1c3JcXGJpblxcbWFrZS5leGUiKQ0KYGBgDQoNCg0KIyMjIFVidW50dSBvIGRlcml2YWRvcyB7LX0NCg0KUGFyYSB0ZW5lciBsYSDDumx0aW1hIHZlcnNpw7NuLCB0ZW7DqXMgcXVlIGFncmVnYXIgbG9zIHJlcG9zaXRvcmlvcyBkZSBDUkFOLiBQYXJhIGhhY2VybG8sIHZhcyBhIHRlbmVyIHF1ZSB0ZW5lciBwZXJtaXNvcyBkZSBhZG1pbmlzdHJhZG9yLiANCkxvcyBkZXRhbGxlcyBlc3TDoW4gZW4gW2VzdGFdKGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL2Jpbi9saW51eC91YnVudHUvKSBww6FnaW5hLCBwZXJvIGVsIHJlc3VtZW4gZXM6DQoNCmBgYGJhc2gNCnN1ZG8gYXB0IHVwZGF0ZSAtcXENCnN1ZG8gYXB0IGluc3RhbGwgLS1uby1pbnN0YWxsLXJlY29tbWVuZHMgc29mdHdhcmUtcHJvcGVydGllcy1jb21tb24gZGlybW5ncg0Kc3VkbyBhcHQta2V5IGFkdiAtLWtleXNlcnZlciBrZXlzZXJ2ZXIudWJ1bnR1LmNvbSAtLXJlY3Yta2V5cyBFMjk4QTNBODI1QzBENjVERkQ1N0NCQjY1MTcxNjYxOUUwODREQUI5DQpzdWRvIGFkZC1hcHQtcmVwb3NpdG9yeSAiZGViIGh0dHBzOi8vY2xvdWQuci1wcm9qZWN0Lm9yZy9iaW4vbGludXgvdWJ1bnR1ICQobHNiX3JlbGVhc2UgLWNzKS1jcmFuNDAvIg0Kc3VkbyBzdWRvIGFwdCBpbnN0YWxsIHItYmFzZSByLWJhc2UtZGV2DQpgYGANCg0KU2kgdG9kbyBzYWxpw7MgYmllbiwgdGVuw6lzIHF1ZSB0ZW5lciBpbnN0YWxhZG8gUiBlbiB0dSBtw6FxdWluYSB5IHBvZMOpcyBlamVjdXRhcmxvIGNvbiBlbCBjb21hbmRvIGBSYCBlbiBsYSBjb25zb2xhLg0KDQoNCmBgYHtyLCBlY2hvPUZBTFNFLCBmaWcuYWx0ID0gIlRlcm1pbmFsIGRlIGxpbnV4IGNvcnJpZW5kbyBSLiJ9DQprbml0cjo6aW5jbHVkZV9ncmFwaGljcygiaW1nL3ItdGVybWluYWwucG5nIikNCmBgYA0KDQojIyMgTWFjIHstfQ0KDQoxLiBJciBhIENSQU46IGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnDQoNCjIuIEhhY2VyIGNsaWNrIGVuIGVsIGxpbmsgX+KAnERvd25sb2FkIFIgZm9yIChNYWMpIE9TIFjigJ0uXw0KDQozLiBEZXNjYXJnYSBlbCBwYXF1ZXRlIGNvcnJlc3BvbmRpZW50ZSBhIHR1IHNpc3RlbWEgb3BlcmF0aXZvLg0KDQo0LiBFamVjdXRhIGVsIHBhcXVldGUuDQoNCg0KIyMgSW5zdGFsYW5kbyBSU3R1ZGlvIHstfQ0KDQpBbmTDoSBhIGh0dHBzOi8vd3d3LnJzdHVkaW8uY29tL3Byb2R1Y3RzL3JzdHVkaW8vZG93bmxvYWQvI2Rvd25sb2FkLiANCkFiYWpvIGRlIHRvZG8gZXN0w6EgZWwgbGlzdGFkbyBkZSBpbnN0YWxhZG9yZXMgcGFyYSBjYWRhIHBsYXRhZm9ybWE7IGRlc2NhcmfDoSBsYSBxdWUgY29ycmVzcG9uZGEgYSB0dSBzaXN0ZW1hIG9wZXJhdGl2by4NCg0KDQpgYGB7ciwgZWNobz1GQUxTRSwgZmlnLmFsdCA9ICJQw6FnaW5hIGRlIGRlc2NhcmdhIGRlIFJTdHVkaW8uIn0NCmtuaXRyOjppbmNsdWRlX2dyYXBoaWNzKCJpbWcvcnN0dWRpby1kZXNjYXJnYS5wbmciKQ0KYGBgDQoNCg0KIyMjIFdpbmRvd3Mgey19DQoNCkNvbW8gc2llbXByZSwgZG9ibGUgY2xpY2sgZW4gZWwgYXJjaGl2byB5IHNlZ3VpciBsb3MgcGFzb3MgZGUgaW5zdGFsYWNpw7NuLg0KDQojIyMgVWJ1bnR1IG8gZGVyaXZhZG9zIHstfQ0KDQpTaSB0ZW7DqXMgaW5zdGFsYWRhIHVuYSBpbnRlcmZheiBncsOhZmljYSBwYXJhIGluc3RhbGFyIGFyY2hpdm9zIC5kZWIsIGVqZWN1dGFuZG8gZWwgYXJjaGl2byBxdWUgZGVzY2FyZ2FzdGUgeWEgdmFzIGEgcG9kZXIgaW5zdGFsYXIgUlN0dWRpby4gDQpTaSBubywgYWJyw60gdW5hIHRlcm1pbmFsIGVuIGVsIGRpcmVjdG9yaW8gZG9uZGUgYmFqYXN0ZSBlbCBhcmNoaXZvIHkgZWplY3V0w6ENCg0KYGBgYmFzaA0Kc3VkbyBkcGtnIC1pIEFSQ0hJVk8NCmBgYA0KDQpSZWVtcGxhemFuZG8gQVJDSElWTyBwb3IgZWwgbm9tYnJlIGRlbCBhcmNoaXZvIGluc3RhbGFkb3IuDQoNCkVzIHBvc2libGUgcXVlIHNhbHRlIGFsZ8O6biBlcnJvciBwb3IgZmFsdGEgZGUgYWxndW5hIGRlcGVuZGVuY2lhLCBlbiBlc2UgY2FzbyB1c8OhDQoNCmBgYGJhc2gNCnN1ZG8gYXB0LWdldCAtZiBpbnN0YWxsDQpgYGANCg0KWSBkZWJlcsOtYSBlc3RhciBhcnJlZ2xhZG8uDQoNClVuYSB2ZXogaW5zdGFsYWRvLCBhbCBlamVjdXRhciBSU3R1ZGlvIGxlcyB0aWVuZSBxdWUgYXBhcmVjZXIgdW5hIHZlbnRhbmEgY29tbyBlc3RhOg0KDQpgYGB7ciwgZWNobz1GQUxTRSwgZmlnLmFsdCA9ICJQYW50YWxsYSBwcmluY2lwYWwgZGUgUlN0dWRpby4ifQ0Ka25pdHI6OmluY2x1ZGVfZ3JhcGhpY3MoImltZy9yc3R1ZGlvLXByaW5jaXBhbC5wbmciKQ0KYGBgDQoNCiMjIyBNYWMgey19DQoNCjIuIERlc2NhcmdhIGUgaW5zdGFsYSBSU3R1ZGlvOiBodHRwczovL3d3dy5yc3R1ZGlvLmNvbQ0KDQpMYSBwcmltZXJhIHZleiBxdWUgYWJyaW1vcyBSU3R1ZGlvIG5vcyBvZnJlY2UgaW5zdGFsYXIgbGFzIGhlcnJhbWllbnRhcyBkZSBYQ29kZSBwYXJhIGzDrW5lYSBkZSBjb21hbmRvcy4gQWNlcHRhbW9zIGhhY2llbmRvIGNsaWMgZW4gaW5zdGFsYXIuDQo=</div>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("90-instalacion.Rmd");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

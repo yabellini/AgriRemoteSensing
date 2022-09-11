@@ -1,0 +1,11 @@
+```{r message=FALSE, warning=FALSE, eval=FALSE}
+# Cargo las librerías
+
+#library(tidyverse)
+#library(sf) #trabaja con datos vectoriales
+#library(rgee)
+#library(mapedit) #trabaja con mapas interactivos
+#library(raster) #trabaja con datos raster
+#library(tmap)
+
+```

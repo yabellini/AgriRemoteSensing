@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Reportes con RMarkdown</title>
+
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Sensoramiento remoto con R aplicado a la agricultura</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Temas
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="01-introduction.html">Flujo de trabajo reproducible</a>
+    </li>
+    <li>
+      <a href="02-r-spatial.html">Ecosistema espacial</a>
+    </li>
+    <li>
+      <a href="03-tareas_basicas.html">Tareas básicas</a>
+    </li>
+    <li>
+      <a href="04-clasificacion_supervisada.html">Clasificación supervisada</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/yabellini/curso_rgee">Repo</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Reportes con RMarkdown</h1>
+
+</div>
+
+
+<p>Es posible que en tu trabajo tengas que presentar informes o
+resultados de tu análisis de datos. Tal vez te hayas encontrando
+guardando una y otra vez gráficos y tablas o copiando resultados de un
+archivo al otro hasta que el informe quedó como querías. Los archivos y
+el paquete <strong>RMarkdown</strong> vienen al rescate.</p>
+<p>Un archivo de R Markdown (generalmente con la extensión
+<code>.Rmd</code>), a diferencia de un script <code>.R</code> (los que
+utilizamos hasta este momento), es un archivo de texto plano que combina
+código de R que genera resultados (gráficos, tablas, etc…) y el texto
+que lo describe. Al poder intercalar cálculos y gráficos con su análisis
+o explicación, se unifica el flujo de trabajo y deja de ser necesario
+guardar figuras o tablas para luego insertarlas en un documento de
+texto. Esto es muy importante si buscamos que nuestro trabajo sea
+reproducible, pero además ahorra tiempo.</p>
+<div id="creando-archivos-.rmd" class="section level2">
+<h2>Creando archivos .Rmd</h2>
+<p>En RStudio podés crear un nuevo archivo de R Markdown con el menú
+desplegable:</p>
+<div class="alert alert-secondary">
+<p>File → New File → R Markdown</p>
+</div>
+<p>Y se abrirá un menú donde podés agregar el título de tu informe y tu
+nombre. Por ahora vamos a usar el formato HTML como salida, pero más
+adelante vas a ver que hay muchos otros formatos de salida posibles.</p>
+<p><img src="img/nuevo-rmd.png" /></p>
+<p>Al aceptar, se abrirá un nuevo archivo con una plantilla de ejemplo
+(en inglés).</p>
+<div class="alert alert-info">
+<p><strong>Primer desafío: Creá un nuevo archivo R Markdown</strong></p>
+<p>Revisá la plantilla que trae el documento. ¿Podés identificar los
+bloques de código?</p>
+</div>
+<p>Para generar el archivo de salida, el paquete <strong>knitr</strong>
+(que viene de <em>tejer</em> en inglés) ejecutará el código en una
+sesión independiente de R e interpretará el texto, su formato y
+cualquier otra cosa que agreguemos (por ejemplo imágenes o links
+externos). Esto significa que nuestro archivo debe tener
+<strong>todo</strong> lo necesario para generar el análisis y si nos
+olvidamos de algo va a dar error.</p>
+<p>Por esta razón es recomendable <em>knitear</em> (generar) el archivo
+seguido, para encontrarnos con los errores a tiempo y de paso
+asegurarnos que el análisis es reproducible.</p>
+<div class="alert alert-info">
+<p><strong>Segundo desafío: kniteá tu R Markdown</strong></p>
+<p>Aprovechando la plantilla de RStudio, obtené el archivo de salida en
+formato HTML haciendo click en el botón <strong>knit</strong> (el que
+tiene un ovillo de lana y un par de agujas).</p>
+</div>
+</div>
+<div id="estructura-de-un-.rmd" class="section level2">
+<h2>Estructura de un .Rmd</h2>
+<p>Cualquier archivo de este tipo tiene 3 partes principales:</p>
+<p><img src="img/rmd-ejemplo-secciones.png" /></p>
+<p>(Podés encontrar este archivo de ejemplo <a
+href="files/mi-primer-rmarkdown.Rmd">acá</a>.)</p>
+<div id="encabezado" class="section level3">
+<h3>Encabezado</h3>
+<p>El encabezado es una serie de instrucciones organizadas entre tres
+guiones (<code>---</code>) que determinan las propiedades globales del
+documento, como el título, el formato de salida, información de autoría,
+etc… También ahí se pueden cambiar opciones asociadas al formato de
+salida, como el estilo de la tabla de contenidos o índice.</p>
+<p>Éstas propiedades se definen en un formato llamado <a
+href="https://es.wikipedia.org/wiki/YAML">YAML</a>, el cual permite
+definir listas jerarquizadas de una forma humanamente legible. Por
+ejemplo:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Mi primer RMarkdown&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html_document</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_download</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_float</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+<p>define dos variables principales, “title” y “output”. “Output” a su
+vez contiene un elemento “htm_document”, el cual contiene tres
+elementos: “code_download”, “toc” y “toc_float”.</p>
+<div class="alert alert-success">
+<p>Es muy importante mantener el escalonado, o <em>identación</em> de
+los elementos, ya que ésta define la jerarquía de cada elemento. Muchos
+de los errores a la hora de knitear ocurren porque el archivo tiene
+problemas en la identación del encabezado.</p>
+</div>
+</div>
+<div id="bloques-de-código" class="section level3">
+<h3>Bloques de código</h3>
+<p>El código de R que va a leer datos, analizarlos y generar figuras,
+tablas o números se organiza en bloques (o <code>chunks</code>)
+delimitados por tres acentos graves (<code>```</code>) y se diferencia
+del resto de archivo con un fondo gris. Todo lo que incluyas entre estos
+delimitadores será interpretado por R como código e intentará ejecutarlo
+al <em>knitear</em> el archivo. Cualquier resultado del código
+(gráficos, tablas, texto, etc…) será insertado en el documento final en
+el mismo orden que están en el archivo R Markdown.</p>
+<div class="alert alert-success">
+<p>Para insertar un nuevo chunk podés:</p>
+<ul>
+<li>Usar el botón <strong>Insert</strong></li>
+<li>El atajo de teclado Ctrl+Alt+I</li>
+<li>Escribir a mano!</li>
+</ul>
+</div>
+<p>El código en cada bloque se ejecuta como si fuera ejecutado en la
+terminal y todo resultado se muestra en el documento (ya vamos a ver
+formas de controlar esto). Por ejemplo, este bloque de código</p>
+<pre><code>```{r sumar}
+1 + 1
+```</code></pre>
+<p>va a insertar esto en el documento de salida:</p>
+<pre><code>[1] 2</code></pre>
+<div class="alert alert-success">
+<p>Es muy importante no romper los límites de los bloques. Un problema
+común es accidentalmente eliminar un acento grave al final de un bloque
+de código y que luego el documento no se genere correctamente. Si al
+knitear te sale un error como <em>“attempt to use zero-length variable
+name”</em>, revisá bien que todos tus bloques de código estén
+correctamente definidos.</p>
+</div>
+<p>Los bloques pueden tener nombre, lo cual es útil para identificar
+donde ocurren los errores al momento de <em>knitear</em> pero también
+para tener una pista de lo que hace el código que incluye.</p>
+<p>Si bien el código se ejecuta cuando uno knitea, cuando estés
+escribiendo un informe es muy cómodo ir corriendo bloques individuales
+interactivamente como si fuera en la consola.</p>
+<p>Para correr una línea de código, tendrás que pararte sobre esa línea
+y apretar:</p>
+<div class="alert alert-secondary">
+<p>Ctrl+Enter</p>
+</div>
+<p>Pero también podés correr el código de todo el chunk con:</p>
+<div class="alert alert-secondary">
+<p>Ctrl+Shift+Enter</p>
+</div>
+<p>Los resultados van a aparecer inmediatamente debajo del bloque.</p>
+<div class="alert alert-info">
+<p><strong>Cuarto desafío: Sumá un chunk a tu archivo</strong></p>
+<p>Usando el archivo con el que venís trabajando insertá un nuevo chunk
+y:</p>
+<ol style="list-style-type: decimal">
+<li>Cargá el paquete <code>readr</code>.</li>
+<li>Creá una variable que se llame <code>variable_prueba</code> y
+asignale un valor.</li>
+<li>Mostrá ese valor.</li>
+<li>Volvé a <em>knitear</em> el archivo para ver el resultado</li>
+</ol>
+</div>
+<p>Finalmente, es posible que te encuentres mencionando resultados en el
+texto, por ejemplo algo así como “el rendimiento máximo de la última
+campaña de maíz fue de 15000 kg/ha”. Y también es posible que ese valor
+cambie si utilizas una base de datos distinta o si luego generas un
+informe pero para otra campaña. Las chances de de que te olvides de
+actualizar ese “15000” son super altas, por eso R Markdown también tiene
+la posibilidad de incorporar código en línea con el texto.</p>
+<p>Si tenés una una variable <code>rendimiento_maximo</code> que vale
+“15000”:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rendimiento_maximo <span class="ot">&lt;-</span> <span class="st">&quot;15000&quot;</span></span></code></pre></div>
+<p>Para mencionarla en el texto entonces escribirías:</p>
+<blockquote>
+<p>el rendimiento máximo de la última campaña de maíz fue de
+<code>`r rendimiento_maximo`</code> kg/ha.</p>
+</blockquote>
+<p>y el resultado en el documento kniteado sería</p>
+<blockquote>
+<p>el rendimiento máximo de la última campaña de maíz fue de 15000
+kg/ha.</p>
+</blockquote>
+<p>prueba: <code>15000</code></p>
+</div>
+<div id="el-texto-propio-del-documento." class="section level3">
+<h3>El texto propio del documento.</h3>
+<p>Este es el texto dirigido a las personas que van a leer el reporte.
+Incluirá una introducción, descripción de los datos y de los resultados;
+es lo que escribirías en el archivo de Word.</p>
+<p>A diferencia de Word, el formato del texto se define usando <a
+href="https://es.wikipedia.org/wiki/Markdown">markdown</a>, que es un
+lenguaje simple que permite indicar si un texto va en negrita, cursiva,
+es un título, etc…usando símbolos especiales dentro del texto.</p>
+</div>
+</div>
+<div id="markdown" class="section level2">
+<h2>Markdown</h2>
+<p>Markdown permite escribir en texto plano pero definiendo el formato
+usando símbolos. Por ejemplo podés resaltar con <strong>negrita</strong>
+usando dos asteriscos así: <code>**negrita**</code> o <em>italizada</em>
+con un asterisco de cada lado: <code>*itálicas*</code>.</p>
+<p>También podés hacer una lista de elementos utilizando asteriscos:</p>
+<pre><code>* la negrita se consigue con dos asteriscos
+* la italizada con un asterisco
+* y para resaltar código se usa el acento grave `</code></pre>
+<p>o guiones medios:</p>
+<pre><code>- la negrita se consigue con dos asteriscos
+- la italizada con un asterisco
+- y para resaltar código se usa el acento grave `</code></pre>
+<p>Ambas listas se van a ver de esta manera:</p>
+<ul>
+<li>la negrita se consigue con dos asteriscos</li>
+<li>la italizada con un asterisco</li>
+<li>y para resaltar código se usa el acento grave `</li>
+</ul>
+<p>Si en realidad querés una lista numerada, simplemente comenzá el
+renglón un número y un punto. Podrías usar siempre el mismo número,
+markdown se encarga del resto:</p>
+<pre><code>1. la negrita se consigue con dos asteriscos
+1. la italizada con un asterisco
+1. y para resaltar código se usa el acento grave `</code></pre>
+<p>Ahora la lista numerada se ve así:</p>
+<ol style="list-style-type: decimal">
+<li>la negrita se consigue con dos asteriscos</li>
+<li>la italizada con un asterisco</li>
+<li>y para resaltar código se usa el acento grave `</li>
+</ol>
+<p>Podés agregar títulos con distinta jerarquía agregando <code>#</code>
+al comienzo. Esto además define secciones dentro del documento:</p>
+<pre><code># Título
+## El primer subtítulo
+### Otro subtítulo de menor jerarquía
+#### Otro más, y podría seguir!</code></pre>
+<p>Podés escribir estos símbolos a mano o usando el Editor Visual de
+RStudio (sólo disponible para la versión 1.4 en adelante) haciendo click
+en el ícono de compás que está a la derecha del documento (<img
+src="img/icono-editor-visual.png" alt="icono del editor visual" />) . El
+Editor Visual permite dar formato al texto usando markdown sin saber
+usar markdown.</p>
+<div class="alert alert-info">
+<p><strong>Tercer desafío: Agregale texto a tu archivo</strong></p>
+<p>Sin tocar el encabezado (el YAML), borrá el contenido del archivo
+<code>.Rmd</code> que creaste y probá escribir algo y darle formato.
+Luego volvé a apretar el botón <strong>knit</strong> para ver el
+resultado.</p>
+</div>
+<p>Markdown permite muchas otras cosas, por ejemplo:</p>
+<p>Podés agregar un link a una página externa:
+<code>[texto que se muestra con el link](http://google.com)</code>.
+Resultado: <a href="http://google.com">texto que se muestra con el
+link</a></p>
+<p>Podés incluir una imagen:
+<code>![descripción de la figura](img/kitty100.jpeg)</code>:
+Resultado:</p>
+<div class="figure">
+<img src="img/incendio.png" alt="" />
+<p class="caption">descripción de la figura</p>
+</div>
+<p>Y también podés agregar ecuaciones (usando <a
+href="https://es.wikipedia.org/wiki/LaTeX">LaTeX</a>) en la misma línea
+(esto:<code>$E = mc^2$</code> se ve así: <span class="math inline">\(E =
+mc^2\)</span>) o en una línea propia. Esto:</p>
+<pre><code>$$
+y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon
+$$</code></pre>
+<p>se ve así:</p>
+<p><span class="math display">\[
+y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon
+\]</span></p>
+<div class="alert alert-success">
+<p>Podés revisar la guía rápida de Markdown desde RStudio (en
+inglés):</p>
+<p>Help → Markdown Quick Reference</p>
+</div>
+</div>
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlJlcG9ydGVzIGNvbiBSTWFya2Rvd24iDQpvdXRwdXQ6IA0KICBodG1sX2RvY3VtZW50Og0KICAgIGNvZGVfZG93bmxvYWQ6IHRydWUNCiAgICBoaWdobGlnaHQ6IHRhbmdvDQotLS0NCg0KDQpFcyBwb3NpYmxlIHF1ZSBlbiB0dSB0cmFiYWpvIHRlbmdhcyBxdWUgcHJlc2VudGFyIGluZm9ybWVzIG8gcmVzdWx0YWRvcyBkZSB0dSBhbsOhbGlzaXMgZGUgZGF0b3MuDQpUYWwgdmV6IHRlIGhheWFzIGVuY29udHJhbmRvIGd1YXJkYW5kbyB1bmEgeSBvdHJhIHZleiBncsOhZmljb3MgeSB0YWJsYXMgbyBjb3BpYW5kbyByZXN1bHRhZG9zIGRlIHVuIGFyY2hpdm8gYWwgb3RybyBoYXN0YSBxdWUgZWwgaW5mb3JtZSBxdWVkw7MgY29tbyBxdWVyw61hcy4NCkxvcyBhcmNoaXZvcyB5IGVsIHBhcXVldGUgKipSTWFya2Rvd24qKiB2aWVuZW4gYWwgcmVzY2F0ZS4NCg0KVW4gYXJjaGl2byBkZSBSIE1hcmtkb3duIChnZW5lcmFsbWVudGUgY29uIGxhIGV4dGVuc2nDs24gYC5SbWRgKSwgYSBkaWZlcmVuY2lhIGRlIHVuIHNjcmlwdCBgLlJgIChsb3MgcXVlIHV0aWxpemFtb3MgaGFzdGEgZXN0ZSBtb21lbnRvKSwgZXMgdW4gYXJjaGl2byBkZSB0ZXh0byBwbGFubyBxdWUgY29tYmluYSBjw7NkaWdvIGRlIFIgcXVlIGdlbmVyYSByZXN1bHRhZG9zIChncsOhZmljb3MsIHRhYmxhcywgZXRjLi4uKSB5IGVsIHRleHRvIHF1ZSBsbyBkZXNjcmliZS4NCkFsIHBvZGVyIGludGVyY2FsYXIgY8OhbGN1bG9zIHkgZ3LDoWZpY29zIGNvbiBzdSBhbsOhbGlzaXMgbyBleHBsaWNhY2nDs24sIHNlIHVuaWZpY2EgZWwgZmx1am8gZGUgdHJhYmFqbyB5IGRlamEgZGUgc2VyIG5lY2VzYXJpbyBndWFyZGFyIGZpZ3VyYXMgbyB0YWJsYXMgcGFyYSBsdWVnbyBpbnNlcnRhcmxhcyBlbiB1biBkb2N1bWVudG8gZGUgdGV4dG8uDQpFc3RvIGVzIG11eSBpbXBvcnRhbnRlIHNpIGJ1c2NhbW9zIHF1ZSBudWVzdHJvIHRyYWJham8gc2VhIHJlcHJvZHVjaWJsZSwgcGVybyBhZGVtw6FzIGFob3JyYSB0aWVtcG8uDQoNCiMjIENyZWFuZG8gYXJjaGl2b3MgLlJtZA0KDQpFbiBSU3R1ZGlvIHBvZMOpcyBjcmVhciB1biBudWV2byBhcmNoaXZvIGRlIFIgTWFya2Rvd24gY29uIGVsIG1lbsO6IGRlc3BsZWdhYmxlOg0KDQo6Ojogey5hbGVydCAuYWxlcnQtc2Vjb25kYXJ5fQ0KRmlsZSDihpIgTmV3IEZpbGUg4oaSIFIgTWFya2Rvd24NCjo6Og0KDQpZIHNlIGFicmlyw6EgdW4gbWVuw7ogZG9uZGUgcG9kw6lzIGFncmVnYXIgZWwgdMOtdHVsbyBkZSB0dSBpbmZvcm1lIHkgdHUgbm9tYnJlLg0KUG9yIGFob3JhIHZhbW9zIGEgdXNhciBlbCBmb3JtYXRvIEhUTUwgY29tbyBzYWxpZGEsIHBlcm8gbcOhcyBhZGVsYW50ZSB2YXMgYSB2ZXIgcXVlIGhheSBtdWNob3Mgb3Ryb3MgZm9ybWF0b3MgZGUgc2FsaWRhIHBvc2libGVzLg0KDQohW10oaW1nL251ZXZvLXJtZC5wbmcpDQoNCkFsIGFjZXB0YXIsIHNlIGFicmlyw6EgdW4gbnVldm8gYXJjaGl2byBjb24gdW5hIHBsYW50aWxsYSBkZSBlamVtcGxvIChlbiBpbmdsw6lzKS4NCg0KOjo6IHsuYWxlcnQgLmFsZXJ0LWluZm99DQoqKlByaW1lciBkZXNhZsOtbzogQ3Jlw6EgdW4gbnVldm8gYXJjaGl2byBSIE1hcmtkb3duKioNCg0KUmV2aXPDoSBsYSBwbGFudGlsbGEgcXVlIHRyYWUgZWwgZG9jdW1lbnRvLg0Kwr9Qb2TDqXMgaWRlbnRpZmljYXIgbG9zIGJsb3F1ZXMgZGUgY8OzZGlnbz8NCjo6Og0KDQpQYXJhIGdlbmVyYXIgZWwgYXJjaGl2byBkZSBzYWxpZGEsIGVsIHBhcXVldGUgKiprbml0cioqIChxdWUgdmllbmUgZGUgKnRlamVyKiBlbiBpbmdsw6lzKSBlamVjdXRhcsOhIGVsIGPDs2RpZ28gZW4gdW5hIHNlc2nDs24gaW5kZXBlbmRpZW50ZSBkZSBSIGUgaW50ZXJwcmV0YXLDoSBlbCB0ZXh0bywgc3UgZm9ybWF0byB5IGN1YWxxdWllciBvdHJhIGNvc2EgcXVlIGFncmVndWVtb3MgKHBvciBlamVtcGxvIGltw6FnZW5lcyBvIGxpbmtzIGV4dGVybm9zKS4NCkVzdG8gc2lnbmlmaWNhIHF1ZSBudWVzdHJvIGFyY2hpdm8gZGViZSB0ZW5lciAqKnRvZG8qKiBsbyBuZWNlc2FyaW8gcGFyYSBnZW5lcmFyIGVsIGFuw6FsaXNpcyB5IHNpIG5vcyBvbHZpZGFtb3MgZGUgYWxnbyB2YSBhIGRhciBlcnJvci4NCg0KUG9yIGVzdGEgcmF6w7NuIGVzIHJlY29tZW5kYWJsZSAqa25pdGVhciogKGdlbmVyYXIpIGVsIGFyY2hpdm8gc2VndWlkbywgcGFyYSBlbmNvbnRyYXJub3MgY29uIGxvcyBlcnJvcmVzIGEgdGllbXBvIHkgZGUgcGFzbyBhc2VndXJhcm5vcyBxdWUgZWwgYW7DoWxpc2lzIGVzIHJlcHJvZHVjaWJsZS4NCg0KOjo6IHsuYWxlcnQgLmFsZXJ0LWluZm99DQoqKlNlZ3VuZG8gZGVzYWbDrW86IGtuaXRlw6EgdHUgUiBNYXJrZG93bioqDQoNCkFwcm92ZWNoYW5kbyBsYSBwbGFudGlsbGEgZGUgUlN0dWRpbywgb2J0ZW7DqSBlbCBhcmNoaXZvIGRlIHNhbGlkYSBlbiBmb3JtYXRvIEhUTUwgaGFjaWVuZG8gY2xpY2sgZW4gZWwgYm90w7NuICoqa25pdCoqIChlbCBxdWUgdGllbmUgdW4gb3ZpbGxvIGRlIGxhbmEgeSB1biBwYXIgZGUgYWd1amFzKS4NCjo6Og0KDQojIyBFc3RydWN0dXJhIGRlIHVuIC5SbWQNCg0KQ3VhbHF1aWVyIGFyY2hpdm8gZGUgZXN0ZSB0aXBvIHRpZW5lIDMgcGFydGVzIHByaW5jaXBhbGVzOg0KDQohW10oaW1nL3JtZC1lamVtcGxvLXNlY2Npb25lcy5wbmcpDQoNCihQb2TDqXMgZW5jb250cmFyIGVzdGUgYXJjaGl2byBkZSBlamVtcGxvIFthY8OhXShmaWxlcy9taS1wcmltZXItcm1hcmtkb3duLlJtZCkuKQ0KDQojIyMgRW5jYWJlemFkbw0KDQpFbCBlbmNhYmV6YWRvIGVzIHVuYSBzZXJpZSBkZSBpbnN0cnVjY2lvbmVzIG9yZ2FuaXphZGFzIGVudHJlIHRyZXMgZ3Vpb25lcyAoYC0tLWApIHF1ZSBkZXRlcm1pbmFuIGxhcyBwcm9waWVkYWRlcyBnbG9iYWxlcyBkZWwgZG9jdW1lbnRvLCBjb21vIGVsIHTDrXR1bG8sIGVsIGZvcm1hdG8gZGUgc2FsaWRhLCBpbmZvcm1hY2nDs24gZGUgYXV0b3LDrWEsIGV0Yy4uLiBUYW1iacOpbiBhaMOtIHNlIHB1ZWRlbiBjYW1iaWFyIG9wY2lvbmVzIGFzb2NpYWRhcyBhbCBmb3JtYXRvIGRlIHNhbGlkYSwgY29tbyBlbCBlc3RpbG8gZGUgbGEgdGFibGEgZGUgY29udGVuaWRvcyBvIMOtbmRpY2UuDQoNCsOJc3RhcyBwcm9waWVkYWRlcyBzZSBkZWZpbmVuIGVuIHVuIGZvcm1hdG8gbGxhbWFkbyBbWUFNTF0oaHR0cHM6Ly9lcy53aWtpcGVkaWEub3JnL3dpa2kvWUFNTCksIGVsIGN1YWwgcGVybWl0ZSBkZWZpbmlyIGxpc3RhcyBqZXJhcnF1aXphZGFzIGRlIHVuYSBmb3JtYSBodW1hbmFtZW50ZSBsZWdpYmxlLg0KUG9yIGVqZW1wbG86DQoNCmBgYCB7LnlhbWx9DQotLS0NCnRpdGxlOiAiTWkgcHJpbWVyIFJNYXJrZG93biINCm91dHB1dDogDQogIGh0bWxfZG9jdW1lbnQ6DQogICAgY29kZV9kb3dubG9hZDogdHJ1ZQ0KICAgIHRvYzogdHJ1ZQ0KICAgIHRvY19mbG9hdDogZmFsc2UNCi0tLQ0KYGBgDQoNCmRlZmluZSBkb3MgdmFyaWFibGVzIHByaW5jaXBhbGVzLCAidGl0bGUiIHkgIm91dHB1dCIuDQoiT3V0cHV0IiBhIHN1IHZleiBjb250aWVuZSB1biBlbGVtZW50byAiaHRtX2RvY3VtZW50IiwgZWwgY3VhbCBjb250aWVuZSB0cmVzIGVsZW1lbnRvczogImNvZGVfZG93bmxvYWQiLCAidG9jIiB5ICJ0b2NfZmxvYXQiLg0KDQo6Ojogey5hbGVydCAuYWxlcnQtc3VjY2Vzc30NCkVzIG11eSBpbXBvcnRhbnRlIG1hbnRlbmVyIGVsIGVzY2Fsb25hZG8sIG8gKmlkZW50YWNpw7NuKiBkZSBsb3MgZWxlbWVudG9zLCB5YSBxdWUgw6lzdGEgZGVmaW5lIGxhIGplcmFycXXDrWEgZGUgY2FkYSBlbGVtZW50by4NCk11Y2hvcyBkZSBsb3MgZXJyb3JlcyBhIGxhIGhvcmEgZGUga25pdGVhciBvY3VycmVuIHBvcnF1ZSBlbCBhcmNoaXZvIHRpZW5lIHByb2JsZW1hcyBlbiBsYSBpZGVudGFjacOzbiBkZWwgZW5jYWJlemFkby4NCjo6Og0KDQojIyMgQmxvcXVlcyBkZSBjw7NkaWdvDQoNCkVsIGPDs2RpZ28gZGUgUiBxdWUgdmEgYSBsZWVyIGRhdG9zLCBhbmFsaXphcmxvcyB5IGdlbmVyYXIgZmlndXJhcywgdGFibGFzIG8gbsO6bWVyb3Mgc2Ugb3JnYW5pemEgZW4gYmxvcXVlcyAobyBgY2h1bmtzYCkgZGVsaW1pdGFkb3MgcG9yIHRyZXMgYWNlbnRvcyBncmF2ZXMgKGBgYGAgYGBgIGBgYGApIHkgc2UgZGlmZXJlbmNpYSBkZWwgcmVzdG8gZGUgYXJjaGl2byBjb24gdW4gZm9uZG8gZ3Jpcy4NClRvZG8gbG8gcXVlIGluY2x1eWFzIGVudHJlIGVzdG9zIGRlbGltaXRhZG9yZXMgc2Vyw6EgaW50ZXJwcmV0YWRvIHBvciBSIGNvbW8gY8OzZGlnbyBlIGludGVudGFyw6EgZWplY3V0YXJsbyBhbCAqa25pdGVhciogZWwgYXJjaGl2by4NCkN1YWxxdWllciByZXN1bHRhZG8gZGVsIGPDs2RpZ28gKGdyw6FmaWNvcywgdGFibGFzLCB0ZXh0bywgZXRjLi4uKSBzZXLDoSBpbnNlcnRhZG8gZW4gZWwgZG9jdW1lbnRvIGZpbmFsIGVuIGVsIG1pc21vIG9yZGVuIHF1ZSBlc3TDoW4gZW4gZWwgYXJjaGl2byBSIE1hcmtkb3duLg0KDQo6Ojogey5hbGVydCAuYWxlcnQtc3VjY2Vzc30NClBhcmEgaW5zZXJ0YXIgdW4gbnVldm8gY2h1bmsgcG9kw6lzOg0KDQotICAgVXNhciBlbCBib3TDs24gKipJbnNlcnQqKg0KLSAgIEVsIGF0YWpvIGRlIHRlY2xhZG8gQ3RybCtBbHQrSQ0KLSAgIEVzY3JpYmlyIGEgbWFubyENCjo6Og0KDQpFbCBjw7NkaWdvIGVuIGNhZGEgYmxvcXVlIHNlIGVqZWN1dGEgY29tbyBzaSBmdWVyYSBlamVjdXRhZG8gZW4gbGEgdGVybWluYWwgeSB0b2RvIHJlc3VsdGFkbyBzZSBtdWVzdHJhIGVuIGVsIGRvY3VtZW50byAoeWEgdmFtb3MgYSB2ZXIgZm9ybWFzIGRlIGNvbnRyb2xhciBlc3RvKS4NClBvciBlamVtcGxvLCBlc3RlIGJsb3F1ZSBkZSBjw7NkaWdvDQoNCiAgICBgYGB7ciBzdW1hcn1gciAnJ2ANCiAgICAxICsgMQ0KICAgIGBgYA0KDQp2YSBhIGluc2VydGFyIGVzdG8gZW4gZWwgZG9jdW1lbnRvIGRlIHNhbGlkYToNCg0KICAgIFsxXSAyDQoNCjo6OiB7LmFsZXJ0IC5hbGVydC1zdWNjZXNzfQ0KRXMgbXV5IGltcG9ydGFudGUgbm8gcm9tcGVyIGxvcyBsw61taXRlcyBkZSBsb3MgYmxvcXVlcy4NClVuIHByb2JsZW1hIGNvbcO6biBlcyBhY2NpZGVudGFsbWVudGUgZWxpbWluYXIgdW4gYWNlbnRvIGdyYXZlIGFsIGZpbmFsIGRlIHVuIGJsb3F1ZSBkZSBjw7NkaWdvIHkgcXVlIGx1ZWdvIGVsIGRvY3VtZW50byBubyBzZSBnZW5lcmUgY29ycmVjdGFtZW50ZS4NClNpIGFsIGtuaXRlYXIgdGUgc2FsZSB1biBlcnJvciBjb21vIF8iYXR0ZW1wdCB0byB1c2UgemVyby1sZW5ndGggdmFyaWFibGUgbmFtZSJfLCByZXZpc8OhIGJpZW4gcXVlIHRvZG9zIHR1cyBibG9xdWVzIGRlIGPDs2RpZ28gZXN0w6luIGNvcnJlY3RhbWVudGUgZGVmaW5pZG9zLg0KOjo6DQoNCkxvcyBibG9xdWVzIHB1ZWRlbiB0ZW5lciBub21icmUsIGxvIGN1YWwgZXMgw7p0aWwgcGFyYSBpZGVudGlmaWNhciBkb25kZSBvY3VycmVuIGxvcyBlcnJvcmVzIGFsIG1vbWVudG8gZGUgKmtuaXRlYXIqIHBlcm8gdGFtYmnDqW4gcGFyYSB0ZW5lciB1bmEgcGlzdGEgZGUgbG8gcXVlIGhhY2UgZWwgY8OzZGlnbyBxdWUgaW5jbHV5ZS4NCg0KU2kgYmllbiBlbCBjw7NkaWdvIHNlIGVqZWN1dGEgY3VhbmRvIHVubyBrbml0ZWEsIGN1YW5kbyBlc3TDqXMgZXNjcmliaWVuZG8gdW4gaW5mb3JtZSBlcyBtdXkgY8OzbW9kbyBpciBjb3JyaWVuZG8gYmxvcXVlcyBpbmRpdmlkdWFsZXMgaW50ZXJhY3RpdmFtZW50ZSBjb21vIHNpIGZ1ZXJhIGVuIGxhIGNvbnNvbGEuDQoNClBhcmEgY29ycmVyIHVuYSBsw61uZWEgZGUgY8OzZGlnbywgdGVuZHLDoXMgcXVlIHBhcmFydGUgc29icmUgZXNhIGzDrW5lYSB5IGFwcmV0YXI6DQoNCjo6OiB7LmFsZXJ0IC5hbGVydC1zZWNvbmRhcnl9DQpDdHJsK0VudGVyDQo6OjoNCg0KUGVybyB0YW1iacOpbiBwb2TDqXMgY29ycmVyIGVsIGPDs2RpZ28gZGUgdG9kbyBlbCBjaHVuayBjb246DQoNCjo6OiB7LmFsZXJ0IC5hbGVydC1zZWNvbmRhcnl9DQpDdHJsK1NoaWZ0K0VudGVyDQo6OjoNCg0KTG9zIHJlc3VsdGFkb3MgdmFuIGEgYXBhcmVjZXIgaW5tZWRpYXRhbWVudGUgZGViYWpvIGRlbCBibG9xdWUuDQoNCjo6OiB7LmFsZXJ0IC5hbGVydC1pbmZvfQ0KKipDdWFydG8gZGVzYWbDrW86IFN1bcOhIHVuIGNodW5rIGEgdHUgYXJjaGl2byoqDQoNClVzYW5kbyBlbCBhcmNoaXZvIGNvbiBlbCBxdWUgdmVuw61zIHRyYWJhamFuZG8gaW5zZXJ0w6EgdW4gbnVldm8gY2h1bmsgeToNCg0KMS4gIENhcmfDoSBlbCBwYXF1ZXRlIGByZWFkcmAuDQoyLiAgQ3Jlw6EgdW5hIHZhcmlhYmxlIHF1ZSBzZSBsbGFtZSBgdmFyaWFibGVfcHJ1ZWJhYCB5IGFzaWduYWxlIHVuIHZhbG9yLg0KMy4gIE1vc3Ryw6EgZXNlIHZhbG9yLg0KNC4gIFZvbHbDqSBhICprbml0ZWFyKiBlbCBhcmNoaXZvIHBhcmEgdmVyIGVsIHJlc3VsdGFkbw0KOjo6DQoNCkZpbmFsbWVudGUsIGVzIHBvc2libGUgcXVlIHRlIGVuY3VlbnRyZXMgbWVuY2lvbmFuZG8gcmVzdWx0YWRvcyBlbiBlbCB0ZXh0bywgcG9yIGVqZW1wbG8gYWxnbyBhc8OtIGNvbW8gImVsIHJlbmRpbWllbnRvIG3DoXhpbW8gZGUgbGEgw7psdGltYSBjYW1wYcOxYSBkZSBtYcOteiBmdWUgZGUgMTUwMDAga2cvaGEiLg0KWSB0YW1iacOpbiBlcyBwb3NpYmxlIHF1ZSBlc2UgdmFsb3IgY2FtYmllIHNpIHV0aWxpemFzIHVuYSBiYXNlIGRlIGRhdG9zIGRpc3RpbnRhIG8gc2kgbHVlZ28gZ2VuZXJhcyB1biBpbmZvcm1lIHBlcm8gcGFyYSBvdHJhIGNhbXBhw7FhLg0KTGFzIGNoYW5jZXMgZGUgZGUgcXVlIHRlIG9sdmlkZXMgZGUgYWN0dWFsaXphciBlc2UgIjE1MDAwIiBzb24gc3VwZXIgYWx0YXMsIHBvciBlc28gUiBNYXJrZG93biB0YW1iacOpbiB0aWVuZSBsYSBwb3NpYmlsaWRhZCBkZSBpbmNvcnBvcmFyIGPDs2RpZ28gZW4gbMOtbmVhIGNvbiBlbCB0ZXh0by4NCg0KU2kgdGVuw6lzIHVuYSB1bmEgdmFyaWFibGUgYHJlbmRpbWllbnRvX21heGltb2AgcXVlIHZhbGUgIjE1MDAwIjoNCg0KYGBge3J9DQpyZW5kaW1pZW50b19tYXhpbW8gPC0gIjE1MDAwIg0KYGBgDQoNClBhcmEgbWVuY2lvbmFybGEgZW4gZWwgdGV4dG8gZW50b25jZXMgZXNjcmliaXLDrWFzOg0KDQo+IGVsIHJlbmRpbWllbnRvIG3DoXhpbW8gZGUgbGEgw7psdGltYSBjYW1wYcOxYSBkZSBtYcOteiBmdWUgZGUgYGAgYGByICJyImAgcmVuZGltaWVudG9fbWF4aW1vYCBgYCBrZy9oYS4NCiANCnkgZWwgcmVzdWx0YWRvIGVuIGVsIGRvY3VtZW50byBrbml0ZWFkbyBzZXLDrWEgDQoNCj4gZWwgcmVuZGltaWVudG8gbcOheGltbyBkZSBsYSDDumx0aW1hIGNhbXBhw7FhIGRlIG1hw616IGZ1ZSBkZSBgciByZW5kaW1pZW50b19tYXhpbW9gIGtnL2hhLg0KDQoNCnBydWViYTogYGAgYHIgcmVuZGltaWVudG9fbWF4aW1vYCBgYA0KDQoNCiMjIyBFbCB0ZXh0byBwcm9waW8gZGVsIGRvY3VtZW50by4NCg0KRXN0ZSBlcyBlbCB0ZXh0byBkaXJpZ2lkbyBhIGxhcyBwZXJzb25hcyBxdWUgdmFuIGEgbGVlciBlbCByZXBvcnRlLg0KSW5jbHVpcsOhIHVuYSBpbnRyb2R1Y2Npw7NuLCBkZXNjcmlwY2nDs24gZGUgbG9zIGRhdG9zIHkgZGUgbG9zIHJlc3VsdGFkb3M7IGVzIGxvIHF1ZSBlc2NyaWJpcsOtYXMgZW4gZWwgYXJjaGl2byBkZSBXb3JkLg0KDQpBIGRpZmVyZW5jaWEgZGUgV29yZCwgZWwgZm9ybWF0byBkZWwgdGV4dG8gc2UgZGVmaW5lIHVzYW5kbyBbbWFya2Rvd25dKDxodHRwczovL2VzLndpa2lwZWRpYS5vcmcvd2lraS9NYXJrZG93bj4pLCBxdWUgZXMgdW4gbGVuZ3VhamUgc2ltcGxlIHF1ZSBwZXJtaXRlIGluZGljYXIgc2kgdW4gdGV4dG8gdmEgZW4gbmVncml0YSwgY3Vyc2l2YSwgZXMgdW4gdMOtdHVsbywgZXRjLi4udXNhbmRvIHPDrW1ib2xvcyBlc3BlY2lhbGVzIGRlbnRybyBkZWwgdGV4dG8uDQoNCiMjIE1hcmtkb3duDQoNCk1hcmtkb3duIHBlcm1pdGUgZXNjcmliaXIgZW4gdGV4dG8gcGxhbm8gcGVybyBkZWZpbmllbmRvIGVsIGZvcm1hdG8gdXNhbmRvIHPDrW1ib2xvcy4NClBvciBlamVtcGxvIHBvZMOpcyByZXNhbHRhciBjb24gKipuZWdyaXRhKiogdXNhbmRvIGRvcyBhc3RlcmlzY29zIGFzw606IGAqKm5lZ3JpdGEqKmAgbyAqaXRhbGl6YWRhKiBjb24gdW4gYXN0ZXJpc2NvIGRlIGNhZGEgbGFkbzogYCppdMOhbGljYXMqYC4NCg0KVGFtYmnDqW4gcG9kw6lzIGhhY2VyIHVuYSBsaXN0YSBkZSBlbGVtZW50b3MgdXRpbGl6YW5kbyBhc3RlcmlzY29zOg0KDQogICAgKiBsYSBuZWdyaXRhIHNlIGNvbnNpZ3VlIGNvbiBkb3MgYXN0ZXJpc2Nvcw0KICAgICogbGEgaXRhbGl6YWRhIGNvbiB1biBhc3RlcmlzY28NCiAgICAqIHkgcGFyYSByZXNhbHRhciBjw7NkaWdvIHNlIHVzYSBlbCBhY2VudG8gZ3JhdmUgYA0KDQpvIGd1aW9uZXMgbWVkaW9zOg0KDQogICAgLSBsYSBuZWdyaXRhIHNlIGNvbnNpZ3VlIGNvbiBkb3MgYXN0ZXJpc2Nvcw0KICAgIC0gbGEgaXRhbGl6YWRhIGNvbiB1biBhc3RlcmlzY28NCiAgICAtIHkgcGFyYSByZXNhbHRhciBjw7NkaWdvIHNlIHVzYSBlbCBhY2VudG8gZ3JhdmUgYA0KDQpBbWJhcyBsaXN0YXMgc2UgdmFuIGEgdmVyIGRlIGVzdGEgbWFuZXJhOg0KDQotICAgbGEgbmVncml0YSBzZSBjb25zaWd1ZSBjb24gZG9zIGFzdGVyaXNjb3MNCi0gICBsYSBpdGFsaXphZGEgY29uIHVuIGFzdGVyaXNjbw0KLSAgIHkgcGFyYSByZXNhbHRhciBjw7NkaWdvIHNlIHVzYSBlbCBhY2VudG8gZ3JhdmUgXGANCg0KU2kgZW4gcmVhbGlkYWQgcXVlcsOpcyB1bmEgbGlzdGEgbnVtZXJhZGEsIHNpbXBsZW1lbnRlIGNvbWVuesOhIGVsIHJlbmdsw7NuIHVuIG7Dum1lcm8geSB1biBwdW50by4NClBvZHLDrWFzIHVzYXIgc2llbXByZSBlbCBtaXNtbyBuw7ptZXJvLCBtYXJrZG93biBzZSBlbmNhcmdhIGRlbCByZXN0bzoNCg0KICAgIDEuIGxhIG5lZ3JpdGEgc2UgY29uc2lndWUgY29uIGRvcyBhc3RlcmlzY29zDQogICAgMS4gbGEgaXRhbGl6YWRhIGNvbiB1biBhc3RlcmlzY28NCiAgICAxLiB5IHBhcmEgcmVzYWx0YXIgY8OzZGlnbyBzZSB1c2EgZWwgYWNlbnRvIGdyYXZlIGANCg0KQWhvcmEgbGEgbGlzdGEgbnVtZXJhZGEgc2UgdmUgYXPDrToNCg0KMS4gIGxhIG5lZ3JpdGEgc2UgY29uc2lndWUgY29uIGRvcyBhc3RlcmlzY29zDQoyLiAgbGEgaXRhbGl6YWRhIGNvbiB1biBhc3RlcmlzY28NCjMuICB5IHBhcmEgcmVzYWx0YXIgY8OzZGlnbyBzZSB1c2EgZWwgYWNlbnRvIGdyYXZlIFxgDQoNClBvZMOpcyBhZ3JlZ2FyIHTDrXR1bG9zIGNvbiBkaXN0aW50YSBqZXJhcnF1w61hIGFncmVnYW5kbyBgI2AgYWwgY29taWVuem8uDQpFc3RvIGFkZW3DoXMgZGVmaW5lIHNlY2Npb25lcyBkZW50cm8gZGVsIGRvY3VtZW50bzoNCg0KICAgICMgVMOtdHVsbw0KICAgICMjIEVsIHByaW1lciBzdWJ0w610dWxvDQogICAgIyMjIE90cm8gc3VidMOtdHVsbyBkZSBtZW5vciBqZXJhcnF1w61hDQogICAgIyMjIyBPdHJvIG3DoXMsIHkgcG9kcsOtYSBzZWd1aXIhDQoNClBvZMOpcyBlc2NyaWJpciBlc3RvcyBzw61tYm9sb3MgYSBtYW5vIG8gdXNhbmRvIGVsIEVkaXRvciBWaXN1YWwgZGUgUlN0dWRpbyAoc8OzbG8gZGlzcG9uaWJsZSBwYXJhIGxhIHZlcnNpw7NuIDEuNCBlbiBhZGVsYW50ZSkgaGFjaWVuZG8gY2xpY2sgZW4gZWwgw61jb25vIGRlIGNvbXDDoXMgcXVlIGVzdMOhIGEgbGEgZGVyZWNoYSBkZWwgZG9jdW1lbnRvICghW2ljb25vIGRlbCBlZGl0b3IgdmlzdWFsXShpbWcvaWNvbm8tZWRpdG9yLXZpc3VhbC5wbmcpKSAuIA0KRWwgRWRpdG9yIFZpc3VhbCBwZXJtaXRlIGRhciBmb3JtYXRvIGFsIHRleHRvIHVzYW5kbyBtYXJrZG93biBzaW4gc2FiZXIgdXNhciBtYXJrZG93bi4NCg0KDQo6Ojogey5hbGVydCAuYWxlcnQtaW5mb30NCioqVGVyY2VyIGRlc2Fmw61vOiBBZ3JlZ2FsZSB0ZXh0byBhIHR1IGFyY2hpdm8qKg0KDQpTaW4gdG9jYXIgZWwgIGVuY2FiZXphZG8gKGVsIFlBTUwpLCBib3Jyw6EgZWwgY29udGVuaWRvIGRlbCBhcmNoaXZvIGAuUm1kYCBxdWUgY3JlYXN0ZSB5IHByb2LDoSBlc2NyaWJpciBhbGdvIHkgZGFybGUgZm9ybWF0by4NCkx1ZWdvIHZvbHbDqSBhIGFwcmV0YXIgZWwgYm90w7NuICoqa25pdCoqIHBhcmEgdmVyIGVsIHJlc3VsdGFkby4NCjo6Og0KDQpNYXJrZG93biBwZXJtaXRlIG11Y2hhcyBvdHJhcyBjb3NhcywgcG9yIGVqZW1wbG86DQoNClBvZMOpcyBhZ3JlZ2FyIHVuIGxpbmsgYSB1bmEgcMOhZ2luYSBleHRlcm5hOiBgW3RleHRvIHF1ZSBzZSBtdWVzdHJhIGNvbiBlbCBsaW5rXShodHRwOi8vZ29vZ2xlLmNvbSlgLiANClJlc3VsdGFkbzogW3RleHRvIHF1ZSBzZSBtdWVzdHJhIGNvbiBlbCBsaW5rXShodHRwOi8vZ29vZ2xlLmNvbSkNCg0KUG9kw6lzIGluY2x1aXIgdW5hIGltYWdlbjogYCFbZGVzY3JpcGNpw7NuIGRlIGxhIGZpZ3VyYV0oaW1nL2tpdHR5MTAwLmpwZWcpYDogUmVzdWx0YWRvOiANCg0KDQohW2Rlc2NyaXBjacOzbiBkZSBsYSBmaWd1cmFdKGltZy9pbmNlbmRpby5wbmcpDQoNClkgdGFtYmnDqW4gcG9kw6lzIGFncmVnYXIgZWN1YWNpb25lcyAodXNhbmRvIFtMYVRlWF0oaHR0cHM6Ly9lcy53aWtpcGVkaWEub3JnL3dpa2kvTGFUZVgpKSBlbiBsYSBtaXNtYSBsw61uZWEgKGVzdG86YCRFID0gbWNeMiRgIHNlIHZlIGFzw606ICRFID0gbWNeMiQpIG8gZW4gdW5hIGzDrW5lYSBwcm9waWEuDQpFc3RvOg0KDQogICAgJCQNCiAgICB5ID0gXG11ICsgXHN1bV97aT0xfV5wIFxiZXRhX2kgeF9pICsgXGVwc2lsb24NCiAgICAkJA0KDQpzZSB2ZSBhc8OtOg0KDQokJA0KeSA9IFxtdSArIFxzdW1fe2k9MX1ecCBcYmV0YV9pIHhfaSArIFxlcHNpbG9uDQokJA0KDQo6Ojogey5hbGVydCAuYWxlcnQtc3VjY2Vzc30NClBvZMOpcyByZXZpc2FyIGxhIGd1w61hIHLDoXBpZGEgZGUgTWFya2Rvd24gZGVzZGUgUlN0dWRpbyAoZW4gaW5nbMOpcyk6DQoNCkhlbHAg4oaSIE1hcmtkb3duIFF1aWNrIFJlZmVyZW5jZQ0KOjo6DQo=</div>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("03-report.Rmd");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
