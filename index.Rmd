@@ -75,6 +75,16 @@ ee_clean_credentials() # Eliminar credenciales de un usuario específico
 ee_clean_pyenv() # Eliminar variables del sistema
 ```
 
+Puede ser que cuando se instale, se necesite indicar en que version de Python queremos instalar la API, como este ejemplo:
+
+```{r eval=FALSE}
+
+ ee_install_upgrade(
+    version = NULL,
+    earthengine_env = "disco:/camino/a/la/carpeta/donde/esta/r-miniconda/envs/" 
+ )
+```
+
 #### RStudio Cloud
 
 Si no pudiste instalar R y RStudio, podés [usar este proyecto de RStudio Cloud](https://rstudio.cloud/content/4484815) para la primera parte del taller.
@@ -103,13 +113,15 @@ Este es un cronograma tentativo.
 |:---|:----------|
 |55 minutos | [Reportes](03-report.html) |
 |5 minutos | Pausa |
-|55 minutos | [rgee](06-rgee.html) |
+|55 minutos | [Datos raster y rgee](04-rgee.html) |
 |5  minutos | Pausa |
-|30 minutos | [Manipulación de datos](04-data-manipulation.html) |
-|20 minutos | [Comunicando tu trabajo](05-reports.html) |
-|10 minutos | Preguntas y cierre |
+|40 minutos | [Datos raster y rgee](04-rgee.html) |
+|20 minutos | Preguntas y cierre |
 
 
+## Slides
+
+Las slides que acompañan al curso [se pueden acceder desde este link]( https://docs.google.com/presentation/d/1ydhgPMTOa0tww6B0Tzc9WS-686aWaHX1ZzGnbrx6Tzw/edit?usp=sharing)
 
 ## ¿Quién soy? 
 
