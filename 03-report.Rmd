@@ -1,7 +1,9 @@
 ---
 title: "Reportes con RMarkdown"
-output:
-  html_document: default
+output: 
+  html_document:
+    code_download: true
+    highlight: tango
 ---
 
 
