@@ -14,7 +14,7 @@ entre las que podemos mencionar:
 * Transformación de datos (p. ej., cambio de proyección, cálculos)
 * Visualización de datos (no solo por medio de mapas)
 * Desarrollo de aplicaciones web
-* Desarrollo de software, en forma de funciones o paquetesd (por ejemplo, para compartir nuevos métodos)
+* Desarrollo de software, en forma de funciones o paquetes (por ejemplo, para compartir nuevos métodos)
 
 ::: {.alert .alert-info}
 El libro [Geocomputación con R](https://geocompr.github.io/es/) es una muy buena guía para ver en detalle muchas de estas tareas.
@@ -210,6 +210,8 @@ ggplot(mapa) +
   geom_point(data = estaciones_smn, mapping = aes(lon, lat)) 
 
 ```
+
+
 Finalmente, podemos restringir el área del mapa para que se muestre solo donde hay datos:
 
 ```{r}
