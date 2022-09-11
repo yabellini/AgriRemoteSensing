@@ -1,0 +1,305 @@
+---
+title: "Flujo de trabajo reproducible"
+output: 
+  html_document:
+    code_download: true
+    highlight: tango
+---
+
+## Proceso de análisis de datos
+
+
+El proceso de análisis de datos en el cual nos vamos a basar se puede ver en el siguiente diagrama:
+
+![Mapa conceptual del proceso de ciencia de datos](img/ciencia-de-datos.png)
+
+
+Primero, debes **importar** tus datos hacia la herramienta donde vas a procesarlos.
+Típicamente, esto implica tomar datos que están guardados en un archivo o base de datos y cargarlos en tu software para poder trabajar con ellos.
+
+Una vez que has importado los datos, el siguiente paso es **ordenarlos** para que tengan un formato adecuado para su análisis.
+Este formato pensado para el análisis tiene la característica que, en los conjuntos de datos ordenados, *cada columna es una variable y cada fila una observación*.
+Tener datos ordenados nos provee una estructura consistente, preparada para analizarlos y podemos enfocar nuestros esfuerzos en las preguntas que queremos contestar con nuestros datos y no tener que acomodarlos cada vez que la pregunta cambie.
+
+Cuando tus datos están ordenados, podemos necesitar *transformarlos*.
+La transformación implica quedarte con las observaciones que sean de interés (como todos los rendimientos de girasol mayores a 2000 kilos por hectárea o todos los datos del último año), crear nuevas variables que a partir de variables ya existentes (como calcular el margen bruto de trigo a partir de los datos de precios y el listado de actividades) y calcular una serie de estadísticos de resumen (como obtener los rendimientos máximos y mínimos de maíz para una región particular).
+
+Una vez que tienes los datos ordenados con las variables que necesitas, hay dos principales fuentes generadoras de conocimiento: la **visualización** y el **modelado**.
+Ambas tienen fortalezas y debilidades complementarias, por lo que cualquier análisis va a utilizarlas varias veces aprovechando los resultados de una para alimentar a la otra.
+
+La visualización es una herramienta fundamental.
+Una buena visualización te mostrará el patrón de los datos, cosas que tal vez no esperabas o te hará surgir nuevas preguntas.
+También puede ayudarte a replantear tus preguntas o darte cuenta si necesitas recolectar datos diferentes.
+
+Los modelos son herramientas complementarias a la visualización.
+Una vez que tus preguntas son lo suficientemente precisas, puedes utilizar un modelo para responderlas.
+Los modelos son herramientas estadísticas o computacionales y tienen supuestos para poder aplicarlos, así que la tarea de seleccionar el modelo adecuado para nuestro problema es una parte importante de este proceso, como también lo es su implantación e interpretación posterior.
+
+El último paso en el proceso de la ciencia de datos es la **comunicación**, una parte crítica de cualquier proyecto de análisis de datos, porque es cuando vas a mostrar tus resultados a otras personas y necesitas que puedan comprenderlos y encontrarlos útiles para utilizarlos.
+
+Alrededor de todas estas herramientas se encuentra la **programación** como herramienta transversal en el proyecto de ciencia de datos.
+No necesitás ser una persona experta en programación para hacer ciencia de datos, pero aprender más sobre programar te ayudará a automatizar tareas recurrentes, compartir tu trabajo de forma reusable y aprovechar el trabajo de otras personas para resolver problemas similares con mayor facilidad y rapidez.
+
+En este curso veremos como realizar algunas de estas etapas  utilizando el software R con un enfoque en procesamiento espacial. Te dejaremos links donde puedes aprender y profundizar más cada aspecto de este proceso.
+
+## ¿Por qué R?
+
+Si estas trabajando con datos espaciales seguro has utilizado diferentes software, como QGIS, Excel, ArGIS, ERDAS y Google Earth Engine.
+
+Cada una de estas herramientas es muy poderosa y si hace tiempo que los venis usando, seguro conoces muchos de sus trucos y secretos.
+
+El uso de R nos permitirá realizar algunas tareas de forma más sencilla, especialmente las que se pueden escribir como una receta paso a paso y que la computadora corra todo automáticamente cada vez que se lo pedís.
+Para poder hacer eso, ese paso a paso tiene que estar escrito en un lenguaje que la computadora pueda entender, ese lenguaje es R.
+
+Con R también podremos compartir estas recetas, estos programas, con otros colaboradores de forma mas sencilla, al igual que realizar la transición de nuestros reportes a aplicaciones web.
+
+## Cómo decirle a R qué hacer
+
+### Orientándose en RStudio
+
+En principio se podría escribir código de R con el Bloc de Notas y luego ejecutarlo, pero nosotros vamos a usar RStudio, que brinda una interfaz gráfica con un montón de herramientas extra para hacernos la vida más fácil.
+
+Cuando abras RStudio te vas a encontrar con una ventana con cuatro paneles como esta:
+
+![Ventana de RStudio](img/rstudio.png)
+
+Los dos paneles de la izquierda son las dos formas principales de interactuar con R.
+El panel de abajo a la izquierda es **la consola**.
+Es el lugar que te permite *conversar* con R.
+Podés escribir comandos que se van a ejecutar inmediátamente cuando aprietes Enter y cuyo resultado se va a mostrar en la consola.
+
+Por ejemplo, hacé click en la consola, escribí `2 + 2` y apretá Enter.
+Vas a ver algo como esto:
+
+```{r}
+2 + 2
+```
+
+Le dijiste a R que sume 2 y 2 y R te devolvió el resultado: 4 (no te preocupes del `[1]` por ahora).
+Eso está bueno si querés hacer una cuenta rápida o chequear algo pequeño, pero no sirve para hacer un análisis complejo y reproducible.
+
+En el panel de arriba a la izquierda tenemos esencialmente un editor de texto.
+Ahí es donde vas a escribir si querés guardar instrucciones para ejecutarlas en otro momento y donde vas a estar el 87% de tu tiempo usando R.
+
+A la derecha hay paneles más bien informativos y que tienen varias solapas que vamos a ir descubriendo a su tiempo.
+Para destacar, arriba a la derecha está el "environment", que es forma de ver qué es lo que está "pensando" R en este momento.
+Ahí vas a poder ver un listado de los datos que están abiertos y otros objetos que están cargados en la memoria de R.
+Ahora está vacío porque todavía no cargaste ni creaste ningún dato.
+Abajo a la derecha tienen un explorador de archivos rudimentario y también el panel de ayuda, que es donde vas a pasar el otro 13% del tiempo usando R.
+
+Entonces, para resumir:
+
+![La cocina de RStudio](img/rstudio-cocina.png)
+
+### Hablando con R
+
+Ya viste cómo usar R como una calculadora.
+
+```{r}
+2 + 2
+```
+
+Si usaste fórmulas en Excel, esto es muy parecido a poner `=2+2` en una celda.
+R entiende un montón de operaciones aritméticas escritas como seguramente ya te imaginás:
+
+-   `+`: sumar
+-   `-`: restar
+-   `*`: multiplicar
+-   `/`: dividir
+-   `^` o `**`: exponenciar
+
+Pero además conoce muchas otras operaciones.
+Para decirle a R que calcule el seno de 1 hay que escribir esto:
+
+```{r}
+sin(1)
+```
+
+Esto es similar a poner `=SIN(1)` en Excel.
+La sintaxis básica para aplicar cualquier función es `nombre_funcion(argumentos)`.
+
+::: {.alert .alert-success}
+**Nota**: En Excel el nombre de las funciones dependen del idioma en el que está instalado.
+Si lo usás en español, la función seno es `SEN()`.
+En R, las funciones siempre se escriben igual (que coincide con el inglés).
+:::
+
+::: {.alert .alert-info}
+**Desafío**
+
+Decile a R que compute las siguientes operaciones:
+
+-   2 multiplicado por 2
+-   3 al cuadrado
+-   dos tercios
+-   5 por 8 más 1
+:::
+
+Al hacer todas estas operaciones, lo único que hiciste fue decirle a R que haga esos cálculos.
+R te devuelve el resultado, pero no lo guarda en ningún lado.
+Para decirle que guarde el resultado de una operación hay que decirle con qué "nombre" querés guardarlo.
+El siguiente código hace eso:
+
+```{r}
+x <- 2 + 2
+```
+
+La "flechita" `<-` es el operador de asignación, que le dice a R que tome el resultado de la derecha y lo guarde en una variable con el nombre que está a la izquierda.
+Vas a ver que no te devuele el resultado.
+Para verlo, ejecutamos
+
+```{r}
+x
+```
+
+Esto le dice a R que te "imprima" el contenido de la variable x.
+
+::: {.alert .alert-info}
+**Desafío**
+
+¿Qué te imaginás que va a pasar cuando ahora corra el siguiente código?
+
+```{r, eval = FALSE}
+x + 2
+```
+:::
+
+Ponerle nombre a las variables es a veces la parte más difícil de escribir código.
+A R le viene bien cualquier nombre de variable siempre y cuando no empiece con un número o un "\_".
+Pero a los seres humanos que lean el código y tengan que interpretarlos les va a resultas más fácil entender qué hace la variable `promedio_rendimiento` que la variable `xxy1`.
+
+El consejo es tratar en lo posible usar nombre descriptivos y consistentes.
+Por ejemplo, siempre usar minúsculas y separar palabras con "\_".
+
+::: {.alert .alert-success}
+**Tip**: Para hacerse la vida más fácil existen "guías de estilo" para programar que explicitan reglas específicas para escribir código.
+Por ejemplo [esta](https://rpubs.com/FvD/guia-estilo-r){.alert-link} o [esta otra](https://github.com/eliocamp/tesis/blob/master/docs/gu%C3%ADa_de_estilo.md){.alert-link}.
+Se trata de reglas únicamente para los ojos humanos, y que no afectan en absoluto la eficiencia o correctitud de la programación.
+En general, no existen guías buenas o malas, la idea es elegir una y ser consistente.
+De esta manera, vas a poder entender tu código con más facilidad.
+:::
+
+### Extendiendo R
+
+R es un lenguaje creado por personas que practican la estadística y pensado para la estadística, por lo que ya viene con un montón de métodos estadísticos incorporados, como `mean()` o `median()`.
+Pero hay tantos métodos estadísticos como gente haciendo estadística así que es imposible que estén todos.
+La solución es que podés "agregarle" a R funciones que no vienen instaladas por defecto pero que escribieron otras personas en forma de "paquetes".
+¡Este es el poder de **la comunidad de R**!
+
+Para instalar paquetes de R, la forma mas fácil es con la función `install.packages()`.
+Esta función se _conecta a internet_ y descarga paquetes publicados en un repositorio oficial 
+Entonces, por ejemplo,
+
+```{r, eval=FALSE}
+install.packages("rnaturalearth")
+```
+
+descarga e instala un paquete que contiene funciones para leer datos.
+
+
+::: {.alert .alert-success}
+**Nota**: Para instalar paquetes de esta forma es necesario tener conexión de internet. 
+:::
+
+Luego, usando el comando
+
+```{r}
+library(rnaturalearth)
+```
+
+le decís a R que cargue las funciones que vienen en el paquete readr para usarlas.
+
+::: {.alert .alert-info}
+**Desafío**: Instalá el paquete rnaturalearth con el comando `install.packages("rnaturalearth")` en la consola.
+:::
+
+::: {.alert .alert-success}
+**Nota**: Si cerrás y volveś a abrir R, vas a tener que usar `library(rnaturalearth)` nuevamente para acceder a la funcionalidad del paquete readr.
+Sólo hace falta correr `install.packages("rnaturalearth")` una vez por máquina.
+:::
+
+## Trabajar con proyectos en RStudio
+
+Trabajar con proyectos de RStudio no solo hace tus análisis más ordenados y reproducibles, también hacen tu vida más simple.
+
+Al comienzo posiblemente tengas un script y uno o dos archivos con datos, pero es posible que rápidamente te encuentres con una docena de archivos con nombres parecidos pero que pertenecen a análisis totalmente distintos.
+Antes de que la cosa comience a complicarse te proponemos trabajar con proyectos.
+
+::: {.alert .alert-info}
+**Usando RStudio Cloud**
+
+Si estás trabajando en RStudio Cloud entonces ya estás trabajando con un proyecto.  Es la configuración por defecto de la plataforma.
+:::
+
+## ¿Qué ventajas tiene?
+
+-   Te permite "cuidar" los datos que usas al ordenarnos en carpetas que diferencien entre la versión original o cruda y los datos limpios o los resultados finales.
+-   Te permite compartir tu trabajo fácilmente con otras personas. Solo tendrías que compartir la carpeta del proyecto sabiendo que incluye todo lo necesario para que cualquiera reproduzca tu análisis.
+-   Te permite publicar de manera ordenada tu código si vas a presentar o publicar tu trabajo.
+-   Te permite continuar con lo que estabas haciendo hace una semana o hace un mes como si el tiempo no hubiera pasado (tu yo futuro te lo va a agradecer).
+
+::: {.alert .alert-info}
+**Desafío: Crea un nuevo proyecto en RStudio**
+
+1.  Hacé click en el menú "Archivo" ("File") y luego en "Nuevo Proyecto" ("New Project").
+2.  Hacé click en "Nueva Carpeta" ("New Directory").
+3.  Hacé click en "Nuevo Proyecto" ("New Project").
+4.  Escribí el nombre de la carpeta que alojará a tu proyecto, por ejemplo "curso_analisis"
+5.  Si aparece (y sabés usarlo), seleccioná "Crear un repositorio de git" ("Create a git repository").
+6.  Hacé click en "Crear Proyecto" ("Create Project").
+:::
+
+Si todo salió bien, ahora deberías tener una nueva carpeta que se llama *curso_analisis*.
+Pero si bien es una carpeta común y corriente, le llamamos proyecto porque además contiene un archivo con el mismo nombre *curso_analisis.Rproj* (o solo *curso_analisis* si en tu computadora no ves la extensión de los archivos).
+
+## Abrir un proyecto
+
+La manera más simple de abrir un proyecto es abriendo la carpeta que lo contiene y haciendo doble click sobre el archivo *curso_analisis.Rproj*.
+Al hacer esto se abrirá RStudio y la sesión de R en la misma carpeta y, por defecto, cualquier archivo que quieras abrir o guardar lo hará en esa misma ubicación.
+Esto ayuda a mantener tu trabajo ordenado y que luego sea simple retomar o compartir lo que hiciste.
+
+RStudio permite tener varios proyectos abiertos, y esto es posible porque justamente cada proyecto tiene su propia carpeta.
+Si en algún momento trabajas con proyectos en paralelo vas a poder hacerlo sin que el código o los resultados de un análisis interfieran con otro.
+
+::: {.alert .alert-info}
+**Desafío: Abrí tu nuevo proyecto desde el explorador de archivos**
+
+1.  Cerrá RStudio
+2.  Desde el explorador de archivos, buscá la carpeta donde creaste tu proyecto.
+3.  Hacé doble click en el archivo que tiene el nombre de tu proyecto (y que termina con *.Rproj*) que encontrarás en esa carpeta.
+:::
+
+## ¿Cómo se organiza?
+
+No existe una "mejor" forma de organizar un proyecto pero acá van algunos principios generales que nos hacen la vida más simple::
+
+-   **Tratar los datos como sólo de lectura** Es posible que la toma de los datos que querés analizar te haya costado mucho trabajo, o te haya costado conseguirlos. Trabajar con datos de forma interactiva (por ejemplo, en Excel) tiene la ventaja de permitirte hacer algunos análisis rápidamente pero al mismo tiempo tiene la desventaja de que esos datos pueden ser modificados fácilmente. Esto significa que a veces no conozcas de la procedencia de los datos, o no recuerdes cómo los modificaste desde que los obtuviste. Por lo tanto, es una buena idea tratar los datos como "sólo de lectura" y nunca modificar los archivos originales.
+-   **Limpieza de datos** En muchos casos tus datos estarán "sucios", necesitarán un preprocesamiento importante para organizarlos en un formato que R (o cualquier otro lenguaje de programación) pueda analizados fácilmente. Esta tarea se denomina a veces "amasado" o "masticado de datos". Es una buena costumbre guardar el código que te permitió limpiar estos datos por si los volvieras a necesitar. También es recomendable guardar esa versión de los datos limpios, de "sólo lectura", para que puedas usarlos en tu análisis sin necesidad de repetir cada vez todo el proceso de limpieza de los datos.
+-   **Tratar las salidas o resultados generados como descartables** Cualquier resultado (gráficos, tablas, valores) debe poder repetirse o rehacerse a partir del código guardado. Si bien las pruebas rápidas para *ver si el código funciona* se pueden hacer en la consola, es importante guardar el código que genera los resultados y asegurarnos de que sean reproducibles. Aún mejor, si organizas esos resultados en distintas sub-carpetas, tendrás todo aún más ordenado.
+
+
+### Borrón y cuenta nueva... todos los días!
+
+¿Cómo nos aseguramos de que el análisis sea realmente reproducible?
+Esta es una pregunta bastante amplia y hay muchas herramientas para resolver este problema.
+Por ahora nos vamos a concentrar en que al menos en tu computadora puedas repetir los cálculos o el análisis desde cero.
+Y además de organizar proyectos y no modificar los datos originales, ¿cómo podés asegurarte de que guardaste todo el código que estuviste escribiendo y usaste?
+La manera más directa es reiniciar la sesión de R y correr el código de nuevo, si da error o no devuelve lo que esperabas significa que te faltó guardar algún paso.
+
+::: {.alert .alert-success}
+Tip: Podés reiniciar la sesión de R con el atajo `Ctrl+Shif+F10`
+:::
+
+Esto puede pasar si por ejemplo leés una base de datos en memoria pero no guardás el código que lo hace.
+Mientras estemos trabajando, R tendrá esa base de datos en memoria y podremos hacer cálculos y gráficos.
+Por defecto además RStudio va a recordar las variables que estés usando mañana o pasado en un archivo oculto (.RData) a menos que le indiques lo contrario.
+Y si bien suena práctico volver a R al otro día y tener el análisis tal cual lo dejamos, esto puede significar que nunca nos demos cuenta que nos faltó guardar una línea de código clave en nuestro análisis.
+
+::: {.alert .alert-info}
+**Desafío: Configurá RStudio**
+
+1.  Hacé click en el menú "Herramientas ("Tools") y luego "Opciones globales" ("Global Options").
+2.  Destildá la opción "Recuperar .RData al inicio de la sesión" ("Restore .RData into workspace at startup").
+3.  Hacé click en "Aplicar" ("Apply").
+:::
+
