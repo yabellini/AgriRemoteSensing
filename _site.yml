@@ -5,15 +5,15 @@ navbar:
        menu: 
         - text: Flujo de trabajo reproducible
           href: 01-introduction.html
-        - text: Ecosistema espacial
+        - text: Ecosistema espacial - datos vectoriales
           href: 02-r-spatial.html
-        - text: Tareas básicas
-          href: 03-tareas_basicas.html
-        - text: Clasificación supervisada
-          href: 04-clasificacion_supervisada.html
+        - text: Reportes
+          href: 03-report.html
+        - text: rgee - datos rasters
+          href: 04-rgee.html
   right:
     - text: Repo
-      href: https://github.com/yabellini/curso_rgee
+      href: https://github.com/yabellini/AgriRemoteSensing
 output_dir: "docs"
 output:
   html_document:
