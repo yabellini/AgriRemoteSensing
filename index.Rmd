@@ -85,7 +85,7 @@ Este es un cronograma tentativo.
 |:---|:----------|
 |55 minutos | [Flujo de trabajo reproducible](01-introduction.html) |
 |5 minutos | Pausa |
-|55 minutos | [El ecosistema espacial](02-r-spatial.html) |
+|55 minutos | [El ecosistema espacial, leyendo y graficando datos vectoriales](02-r-spatial.html) |
 |5  minutos | Pausa |
 |55 minutos | [Leyendo](03-leyendo-datos.html) y [graficando](04-graficando.html) datos|
 |5 minutos | Preguntas y cierre primera parte|
