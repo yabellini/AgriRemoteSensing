@@ -1,0 +1,411 @@
+Id,Nombre,Tipo,Localidad,Provincia,Latitud,Longitud,Altura,Id Interno,Ubicacion,Desde,Hasta
+481,Zampalito - EEA Consulta,Nimbus THP,Tupungato,Mendoza,-33.48,-69.05,750,A872700,"Zampalito, Tupungato, Mendoza",22/07/2015,26/07/2019
+413,25 de Mayo - EEA Pergamino,Nimbus THP,25 de Mayo,Buenos Aires,-35.48,-60.13,85,A872872,CC 18 CP6660,04/09/2012,23/09/2020
+682,5000,Nimbus THP,Hurlingham,Buenos Aires,-90,0,0,A875000,-,20/11/2019,27/04/2020
+683,5001,Nimbus THP,Hurlingham,Buenos Aires,-90,0,0,A875001,-,20/11/2019,27/04/2020
+671,A873000,Nimbus THP,25 de Mayo,Río Negro,-90,-20,100,A873000,A873000,27/06/2019,09/03/2020
+675,A877777,Nimbus THP,25 de Mayo,Río Negro,0,0,0,A877777,A877777,17/10/2019,21/04/2020
+516,Abra Pampa - EEA Abra Pampa,Nimbus THP,Abra Pampa,Jujuy,-22.8,-65.83,3463,A872923,Ruta Provincial 11 km 17 - Abra Pampa,28/08/2013,23/09/2020
+566,Alcaraz,Omixom,Sin asignar,Entre Rios,-31.48,-59.59,0,91046,La Paz,31/03/2017,12/01/2019
+625,Aldea Asuncion,Omixom,Sin asignar,Entre Rios,-32.93,-59.24,0,91086,Gualeguay,09/11/2017,12/01/2019
+279,Alej. Roca - EEA Marcos Juarez,Nimbus THP,Alejandro Roca,Córdoba,-33.5,-63.66,215,A872828,"Colonia San José, 20km al sur de A. Roca",18/11/2011,25/04/2020
+236,Alfonso - EEA Pergamino,Nimbus THP,Mariano Alfonso,Buenos Aires,-33.91,-60.84,80,A872814,Ruta 8 km; 248.,31/12/1999,23/09/2020
+365,Algarrobo,Davis,Algarrobo,Buenos Aires,-38.89,-63.14,40,D0010,Algarrobo (Hilario Ascasubi),06/09/2012,07/05/2019
+632,Almacén Iglesias,Omixom,Sin asignar,Entre Rios,-32.02,-59.53,0,91095,Nogoyá,31/03/2017,12/01/2019
+621,Altamirano Norte,Omixom,Sin asignar,Entre Rios,-32.06,-59.16,0,91081,Tala,05/10/2017,12/01/2019
+393,Andalgala - EEA Catamarca,Nimbus THP,Andalgala,Catamarca,-27.61,-66.33,983,A872885,Ing. Jacobaci s/n. Distrito de Huaco CP :4740,12/12/2012,23/09/2020
+403,Andresito - EEA Montecarlo,Nimbus THP,Andresito,Misiones,-25.62,-54.07,261,A872912,"RP 19 y Av. Chile, acceso Andresito, CP: 3385",11/06/2013,23/09/2020
+233,Anguil -EEA Anguil,Nimbus THP,Anguil,La Pampa,-36.54,-63.99,165,A872823,Ruta Nacional Nº 5 Km. 580. CP: 6326,13/09/2010,23/09/2020
+468,Aparicio - EEA Barrow,Nimbus THP,Coronel Dorrego,Buenos Aires,-38.67,-60.93,118.800003051758,A872838,0,12/11/2014,09/06/2017
+411,Apolinario Saravia - EEA Salta,Nimbus THP,Apolinario Saravia,Salta,-24.43,-63.99,360,A872879,"Ruta Prov. N°5 y acceso a A. Saravia, CP: 4449",11/09/2013,08/09/2020
+602,Arandú,Omixom,Sin asignar,Corrientes,-29.78,-57.46,0,92024,Bonpland,31/03/2017,10/01/2019
+237,Arrecifes - EEA Pergamino,Nimbus THP,Arrecifes,Buenos Aires,-34.05,-60.14,36,A872820,"Ruta 8 Km 178,5",11/10/2010,23/09/2020
+583,Arroyo Barú,Omixom,Sin asignar,Entre Rios,-31.85,-58.47,0,91064,Colón,04/04/2017,12/01/2019
+577,Arroyo del Medio,Omixom,Sin asignar,Entre Rios,-31.31,-59.09,0,91058,Federal,18/04/2017,12/01/2019
+539,Atencio,Omixom,Sin asignar,Entre Rios,-30.66,-58.77,0,91037,Feliciano,31/03/2017,12/01/2019
+404,B de Irigoyen - EEA Montecarlo,Nimbus THP,Bernardo de Irigoyen,Misiones,-26.28,-53.67,815,A872913,"RN 14, acceso B. de Irigoyen, CP: 3366",07/06/2013,23/09/2020
+242,Balcarce - EEA Balcarce,Nimbus THP,Balcarce,Buenos Aires,-37.76,-58.3,130,A872824,"Ruta 226 km 73,5. C.C 276 CP: 7620",10/11/2010,22/10/2019
+251,Bandera - EEA E Santiago,Nimbus THP,Belgrano,Santiago del Estero,-28.89,-62.27,98,A872811,,14/12/2010,23/09/2020
+269,Bariloche - EEA Bariloche,Nimbus THP,Bariloche,Río Negro,-41.12,-71.25,796,A872849,Modesta Victoria 4450 CP: 8400,28/05/2011,23/09/2020
+383,Basail - EEA Col Benitez,Nimbus THP,San Fernando,Chaco,-27.9,-59.3,55,A872893,,13/12/2012,14/10/2019
+574,Basavilbaso,Omixom,Sin asignar,Entre Rios,-32.38,-58.88,0,91054,Uruguay,31/03/2017,12/01/2019
+546,Basualdo,Omixom,Sin asignar,Entre Rios,-30.29,-58.66,0,91024,Feliciano,31/03/2017,12/01/2019
+491,Bella Vista - EEA Bella Vista,Nimbus THP,Bella Vista,Corrientes,-28.45,-58.99,70,A872951,Ruta 27-10Km norte de Bella Vista -CC5-3432,17/06/2015,23/09/2020
+580,Berduc,Omixom,Sin asignar,Entre Rios,-31.94,-58.3,0,91061,Colon,31/03/2017,12/01/2019
+650,Berón de Astrada,Omixom,Sin asignar,Corrientes,-27.42,-57.64,0,32007,Berón de Astrada,03/04/2017,17/12/2018
+425,Bme de las Casas -EEA Colorado,Nimbus THP,Bartolomé de las Casas,Formosa,-25.45,-59.5,116.400001525879,A872904,-,12/12/2013,04/05/2018
+465,Bodegas Etchart,Davis,Cafayate,Salta,-26.1,-65.97,1620,D0004,Ruta Nacional Nº 40 - Km 4338,24/11/2014,01/04/2020
+518,Bordenave - EEA Bordenave,Nimbus THP,Bordenave,Buenos Aires,-37.75,-63.08,202,A872817,"Ruta Provincial 76 Km 36,5 8187",02/11/2016,23/09/2020
+505,Bordo,Davis,General Güemes,Salta,-24.66,-65.11,797,D0055,Estancia El Bordo de las Lanzas,06/01/2016,06/02/2020
+487,Buenaventura,Davis,Anta,Salta,-24.98,-64.37,579,D0015,Ruta Prov. N° 68 Km. 9,09/07/2015,10/12/2018
+305,C. A. Cordero - EEA Alto Valle,Nimbus THP,C.Almte Cordero,Río Negro,-38.74,-68.11,297,A872848,"“el 15” sobre RN 151, Km 26. CP: 8301",27/05/2011,21/11/2018
+427,Caa Cati - EEA Corrientes,Nimbus THP,Caá Catí,Corrientes,-27.75,-57.62,74,A872921,"Blanco Vega 319, CP: 3407",17/12/2013,14/08/2020
+589,Cabaña El Paraiso,Omixom,Sin asignar,Corrientes,-29.69,-58.29,0,92007,Curuzú Cuatiá,21/07/2017,12/01/2019
+343,CAFER - Don Cristóbal,Imetos,Don Cristóbal Primero,Entre Rios,-32.07,-59.99,101,1039,Dto. de Nogoyá,31/12/2011,12/12/2015
+296,Calchaqui - EEA Reconquista,Nimbus THP,Calchaqui,Santa Fe,-29.88,-60.24,70,A872867,"Est. Los Laureles, 5 km al este de Calchaquí",16/11/2011,23/09/2020
+474,Calingasta - EEA San Juan,Nimbus THP,Calingasta,San Juan,-31.62,-69.46,30,A872927,"Presidente Roca S/N. C.P. 5405, Barreal",25/11/2014,23/09/2020
+484,Capilla de Siton - ICyA CIRN,Nimbus THP,Capilla de Sitón,Córdoba,-30.57,-63.65,212,A872945,-,14/04/2015,23/09/2020
+664,Capilla del Monte (EMC),Convencional Instr. Completo,Capilla del Monte,Córdoba,-30.87,-64.55,0,NH0989,Establecimiento privado,02/01/2012,03/09/2020
+678,Casbas - EEA C. Naredo,Nimbus THP,A definir,Sin asignar,-36.86,-62.45,100,A872926,Casbas,05/11/2019,23/09/2020
+79,Castelar - ICyA CIRN,Nimbus THP,Hurlingham,Buenos Aires,-34.61,-58.67,22,A872801,Las Cabañas y De Los Reseros s/n,06/08/2009,23/09/2020
+380,Catuna - EEA La Rioja,Nimbus THP,Villa Santa Rita de Catuna,La Rioja,-30.96,-66.17,497,A872889,"Ruta Nac. 79 s/n,Dto.Gral Ortiz de Ocampo, CP:5275",04/06/2012,19/07/2020
+431,Caucete - EEA San Juan,Nimbus THP,Caucete,San Juan,-31.7,-68.29,543,A872928,Divisoria e/20 y Ruta 270 Dto 25 de Mayo CP: 5443,11/04/2014,23/09/2020
+489,Cañada Ombu - EEA Reconquista,Nimbus THP,Cañada Ombu,Santa Fe,-28.36,-60.15,58,A872946,"Ruta 100, KM 20,Código Postal: 3551",21/11/2016,21/09/2020
+476,Cañada Seca - EEA Villegas,Nimbus THP,Cañada Seca,Buenos Aires,-34.55,-62.9,127,A872943,"Ruta 33, Km 495 (3 km por camino rural) CP 6105",03/12/2014,03/04/2020
+605,CE.TE.PRO.,Omixom,Sin asignar,Corrientes,-27.47,-58.78,0,92029,Corrientes,31/03/2017,16/10/2018
+638,CEAGRO,Omixom,Sin asignar,Corrientes,-29.56,-58.09,0,32012,Curuzú Cuatiá,31/03/2017,12/01/2019
+585,Centro de Conservación,Omixom,Sin asignar,Corrientes,-27.34,-58.6,0,92002,San Cosme,31/03/2017,16/10/2018
+293,Ceres - EEA Rafaela,Nimbus THP,Ceres,Santa Fe,-29.87,-61.96,2,A872864,"Ruta 34 km 389, Ceres",06/06/2013,23/09/2020
+569,Cerrito,Omixom,Sin asignar,Entre Rios,-31.59,-60.08,0,91049,Parana,31/03/2017,12/01/2019
+382,Cerro Azul - EEA Cerro Azul,Nimbus THP,Cerro Azul,Misiones,-27.66,-55.44,292,A872908,Ruta Nacional 14. Km. 1085. CP: 3313,28/12/2012,22/09/2020
+458,Chacra 25 de Julio,Davis,28 de Julio,Chubut,-43.4,-65.82,36,D0006,,23/10/2014,05/12/2014
+559,Chajarí,Omixom,Sin asignar,Entre Rios,-30.74,-58.01,0,91038,Federación,31/03/2017,12/01/2019
+472,Chascomus - EEA Cuenca Salado,Nimbus THP,Chascomus,Buenos Aires,-35.74,-58.05,28.2000007629395,A872806,,21/11/2014,23/09/2020
+592,Chavarria,Omixom,Sin asignar,Corrientes,-28.87,-58.46,0,92012,San Roque,31/03/2017,26/10/2018
+401,Cnel Pringles - EEA Bordenave,Nimbus THP,Coronel Suarez,Buenos Aires,-37.74,-61.53,217,A872701,,30/05/2013,23/02/2019
+377,Col Popular - EEA Col Benitez,Nimbus THP,Colonia Popular,Chaco,-27.27,-59.14,82,A872891,Ruta Nº 16 km 38 CP: 3505,11/12/2012,23/09/2020
+495,Colan Conhué - EEA Esquel,Nimbus THP,Colan Conhué,Chubut,-43.23,-69.92,844,A872854,---,03/07/2015,23/09/2020
+636,Colonia Carlos Pellegrini,Omixom,Sin asignar,Corrientes,-28.55,-57.2,0,32004,San Martin,03/04/2017,13/01/2019
+530,Colonia Carrasco,Omixom,Sin asignar,Entre Rios,-31.32,-59.59,0,91019,La Paz,31/03/2017,10/01/2019
+639,Colonia Catalina,Omixom,Sin asignar,Entre Rios,-31.51,-58.55,0,31002,Villaguay,09/08/2017,14/01/2019
+629,Colonia Celina,Omixom,Sin asignar,Entre Rios,-31.62,-60.31,0,91090,Parana,31/03/2017,12/01/2019
+573,Colonia San Carlos,Omixom,Sin asignar,Entre Rios,-31.19,-59.52,0,91053,La Paz,31/03/2017,12/01/2019
+612,Colonia Santa Lucia,Omixom,Sin asignar,Entre Rios,-30.88,-58.51,0,91072,Federal,28/11/2017,12/01/2019
+560,Colón,Omixom,Sin asignar,Entre Rios,-32.25,-58.15,0,91039,Colón,31/03/2017,12/01/2019
+480,Comandante Fontana,Davis,Comandante Fontana,Formosa,-25.36,-59.69,86,D0014,Zona Rural - Lote 20,04/03/2015,12/03/2015
+272,Concepción - EEA Conc. Uruguay,Nimbus THP,Concepción del Uruguay,Entre Rios,-32.49,-58.35,17,A872830,Ruta 39 Km 143.5,29/10/2012,23/09/2020
+635,Coopecicor,Omixom,Sin asignar,Corrientes,-30.62,-57.98,0,32002,Mocoreta,22/09/2017,07/01/2019
+244,Coronel Suarez - EEA Bordenave,Nimbus THP,Coronel Suarez,Buenos Aires,-37.44,-61.92,237,A872816,Av. Teresita Castilla 497. CP: 7540,25/11/2010,23/09/2020
+645,Corrales,Omixom,Sin asignar,Entre Rios,-32.57,-60.09,0,31008,Victoria,31/03/2017,25/12/2018
+517,Crespo,Omixom,Paraná,Entre Rios,-32.07,-60.25,0,31001,Parana,31/03/2017,13/01/2019
+554,Crucecita 7ma.,Omixom,Sin asignar,Entre Rios,-31.97,-59.85,0,91033,Nogoya,03/05/2017,02/01/2019
+617,Crucecita Tercera,Omixom,Sin asignar,Entre Rios,-32.21,-59.67,0,91077,Nogoya,31/03/2017,02/01/2019
+643,Cuchilla,Omixom,Sin asignar,Entre Rios,-33.04,-59.44,0,31006,Gualeguay,26/07/2017,13/01/2019
+600,Curuzu Cuatia (Aeropuerto),Omixom,Sin asignar,Corrientes,-29.75,-57.98,0,92022,Curuzu Cuatia,10/09/2017,19/12/2018
+436,Curuzu Cuatia - EEA Mercedes,Nimbus THP,Curuzu Cuatia,Corrientes,-29.87,-58.11,80,A872920,"Ruta Provincial 126, km 68. Dpto Mercedes CP: 3460",12/02/2014,02/03/2020
+243,De La Garma - ICyA CIRN,Nimbus THP,De La Garma,Buenos Aires,-37.84,-60.39,138,A872807,Ruta 75 - Cuartel XIV - Adolfo Gonzales Chaves,22/11/2010,23/01/2017
+478,Dean Funes - EEA Manfredi,Nimbus THP,Dean Funes,Córdoba,-30.34,-64.32,701.5,A872829,-,14/04/2015,23/09/2020
+450,Delta - EEA Delta del Parana,Nimbus THP,Islas de Campana,Buenos Aires,-34.17,-58.87,18,A872710,Río Paraná de la Palmas y Canal Laurentino Comas,16/04/2014,05/02/2018
+597,Derqui,Omixom,Sin asignar,Corrientes,-27.83,-58.79,0,92017,Empedrado,31/03/2017,25/10/2018
+631,Diamante (Ejido),Omixom,Sin asignar,Entre Rios,-32.13,-60.53,0,91094,Diamante,31/03/2017,12/01/2019
+549,Don Cristobal 2da.,Omixom,Sin asignar,Entre Rios,-32.07,-60,0,91027,Nogoya,31/03/2017,12/01/2019
+502,Du Graty - EEA Sáenz Peña,Nimbus THP,Coronel Du Graty,Chaco,-27.7,-60.91,89.3000030517578,A872958,Acceso Sur Prolongación; CP: 3541,02/12/2015,23/09/2020
+652,EEA Cesareo Naredo,Davis,Guamini,Buenos Aires,-36.5,-62,120,D0057,EEA Cesareo Naredo,08/09/2017,07/06/2019
+424,El Colorado - EEA El Colorado,Nimbus THP,Pirane,Formosa,-26.33,-59.35,106,A872905,Av.Carlos Pellegrini s/n Acceso Sur- 3603,07/10/2013,23/09/2020
+504,El Galpon,Davis,El Galpón,Salta,-25.38,-64.64,520,D0054,---,06/01/2016,13/03/2020
+247,El Palmar - EEA Conc. Uruguay,Nimbus THP,Ubajay,Entre Rios,-31.86,-58.26,35,A872804,"Ruta 14, km 198. A 17 km de Ubajay",13/12/2010,23/09/2020
+378,El Portezuelo - EEA La Rioja,Nimbus THP,El Portezuelo,La Rioja,-30.84,-66.7,820,A872887,"Ruta Prov. N° 28, salida a Malanzan.CP: 5385",11/10/2012,22/09/2020
+415,El Potrero - EEA Yuto,Nimbus THP,Colonia Santa Rosa,Salta,-23.47,-64.38,350,A872883,RN 34 Km 1305 CP: 4400,18/09/2013,11/09/2020
+545,El Redomon,Omixom,Sin asignar,Entre Rios,-31.08,-58.28,0,91023,Concordia,31/03/2017,12/01/2019
+594,El Remanso,Omixom,Sin asignar,Corrientes,-29.99,-58.38,0,92014,Curuzú Cuatiá,31/03/2017,12/01/2019
+303,Esperanza - EEA Santa Cruz,Nimbus THP,Esperanza,Santa Cruz,-51.1,-70.5,541,A872860,"Ruta prov. Nº 5, Esperanza",17/11/2011,18/05/2020
+417,Esquina - EEA Bella Vista,Nimbus THP,Esquina,Corrientes,-30.04,-59.53,52.9000015258789,A872914,"Ruta 12 Km 682 (Acceso Sur), CP: 3196",06/11/2013,07/09/2020
+437,Est. Torrent - EEA Mercedes,Nimbus THP,Estación Torrent,Corrientes,-28.8,-56.5,85.8000030517578,A872705,"Ruta Nacional 14 km 723, CP:3344",12/02/2014,07/04/2018
+620,Estacas,Omixom,Sin asignar,Entre Rios,-30.59,-59.23,0,91080,La Paz,31/03/2017,12/11/2017
+649,Estancia Puerto Valle,Omixom,Sin asignar,Corrientes,-27.61,-56.44,0,32011,Ituzaingo,31/03/2017,01/01/2019
+588,Estancia San Nicolas,Omixom,Sin asignar,Corrientes,-27.87,-57.39,0,92008,San Miguel,31/03/2017,12/01/2019
+348,Famailla - EEA Famailla,Nimbus THP,Famaillá,Tucuman,-27.02,-65.38,379.799987792969,A872871,"Ruta Prov. 301, Km 32 CP: 4132",13/12/2011,23/09/2020
+578,Federación,Omixom,Sin asignar,Entre Rios,-31.06,-57.92,0,91059,Federación,31/03/2017,12/01/2019
+551,Federal,Omixom,Sin asignar,Entre Rios,-30.93,-58.79,0,91029,Federal,15/11/2017,12/01/2019
+248,Federal - EEA Concordia,Nimbus THP,Federal,Entre Rios,-30.93,-58.77,65,A872805,"Ruta 127, a 1 km de Va. Federal",14/12/2010,17/09/2020
+562,Feliciano,Omixom,Sin asignar,Entre Rios,-30.43,-58.77,0,91041,Feliciano,31/03/2017,12/01/2019
+238,Ferre - EEA Pergamino,Nimbus THP,Ferré,Buenos Aires,-34.1,-61.14,103,A872815,"Ruta Provincial 50, Km. 638.",22/11/2011,23/09/2020
+453,G Conesa(7)-EEA Valle Inferior,Nimbus THP,General Conesa,Río Negro,-40.07,-64.61,69,A872708,,02/07/2014,28/07/2019
+565,Galarza,Omixom,Sin asignar,Entre Rios,-32.72,-59.38,0,91045,Gualeguay,31/03/2017,12/01/2019
+375,Gancedo - EEA Las Breñas,Nimbus THP,Gancedo,Chaco,-27.48,-61.66,140,A872894,Calle San Martin s/n CP: 3734 Dto. 12 de Octubre,28/11/2012,13/02/2020
+295,Garabato - EEA Reconquista,Nimbus THP,Garabato,Santa Fe,-28.89,-60.19,66,A872866,"RP 3 Km 31,5, Garabato, dto. Vera, CP: 3551",16/11/2011,29/12/2017
+273,General Campos - EEA Concordia,Nimbus THP,General Campos,Entre Rios,-31.53,-58.4,40,A872831,Entre Ríos,29/07/2011,15/09/2020
+593,General Paz (Caá Catí),Omixom,Sin asignar,Corrientes,-27.72,-57.6,0,92013,Corrientes,31/03/2017,24/10/2018
+598,Goya,Omixom,Sin asignar,Corrientes,-29.08,-59.2,0,92019,Goya,31/03/2017,15/10/2018
+408,Goya - EEA Bella Vista,Nimbus THP,Goya,Corrientes,-29.18,-59.09,84,A872950,Paraje Maruchas (camino vecinal sobre ruta 12),03/09/2013,20/02/2020
+235,Gral San Martin - EEA Anguil,Nimbus THP,General San Martin,La Pampa,-38,-63.52,177.899993896484,A872821,Ruta Nac. Nº35 Km. 110. CP: 8206,10/09/2010,23/09/2020
+674,Gral. Conesa - EEA Valle Inf.,Nimbus THP,General Conesa,Río Negro,-40.21,-64.19,100,A872972,,08/01/2019,21/10/2019
+268,Gral. Roca - EEA Alto Valle,Nimbus THP,General Roca,Río Negro,-39.03,-67.74,242,A872846,Rta. Nac. 22 km1190 (Allen) CP: 8330,27/05/2011,23/09/2020
+567,Gualeguay,Omixom,Sin asignar,Entre Rios,-33.1,-59.3,0,91047,Gualeguay,26/07/2017,12/01/2019
+528,Gualeguaychu,Omixom,Sin asignar,Entre Rios,-33.03,-58.62,0,91003,Gualeguaychu,31/03/2017,11/01/2019
+274,Gualjaina - EEA Esquel,Nimbus THP,Gualjaina,Chubut,-42.73,-70.5,501.399993896484,A872853,Chacra Tertulia de Gualjaina,30/05/2011,08/06/2020
+648,Guayquiraró,Omixom,Sin asignar,Corrientes,-30.29,-59.45,0,32006,Esquina,14/12/2017,03/12/2018
+579,Hasenkamp,Omixom,Sin asignar,Entre Rios,-31.52,-59.84,0,91002,Parana,31/03/2017,12/01/2019
+492,Herliszka - EEA Corrientes,Nimbus THP,Herliszka,Corrientes,-27.62,-58.37,67.8000030517578,A872952,Ruta 5 - km 45.5,19/06/2015,16/10/2018
+385,Hermoso Campo - EEA Las Breñas,Nimbus THP,Hermoso Campo,Chaco,-27.6,-61.31,95.8000030517578,A872896,Ruta 5 acceso Hermoso Campo CP: 3733,28/02/2013,25/06/2020
+547,Hernandarias,Omixom,Sin asignar,Entre Rios,-31.2,-59.97,0,91001,Parana,31/03/2017,12/01/2019
+576,Hinojal,Omixom,Sin asignar,Entre Rios,-32.38,-60.17,0,91057,Victoria,05/04/2017,12/01/2019
+488,Hornillos - IPAF NOA,Nimbus THP,Hornillos,Jujuy,-23.66,-65.43,2241,A872925,"RN Nº 9, Km 1763 CP (4622)",08/05/2015,23/09/2020
+234,Huinca Renanco - EEA Anguil,Nimbus THP,Huinca Renanco,Córdoba,-34.77,-64.37,189,A872822,Ruta Nac. Nº35 Km.535 CP: 6270,06/09/2010,23/09/2020
+581,Humaita,Omixom,Sin asignar,Entre Rios,-31.8,-58.19,0,91062,Colon,31/03/2017,12/01/2019
+599,Ibicuy-Copra,Omixom,Sin asignar,Corrientes,-29.17,-57.96,0,92021,Mercedes,13/07/2017,23/11/2018
+452,IDEVI - EEA Valle Inferior,Nimbus THP,Viedma,Río Negro,-40.71,-63.53,14,A872843,,07/07/2014,25/02/2020
+667,Ing. Jacobacci - EEA Bariloche,Nimbus THP,Ingeniero Jacobacci,Río Negro,-41.33,-69.55,30,A872898,AER Ing. Jacobacci,12/03/2019,13/01/2020
+426,Ing. Juárez - EEA Ing. Juárez,Nimbus THP,Ingeniero Guillermo Juárez,Formosa,-23.95,-61.75,207.699996948242,A872903,-,27/06/2013,31/07/2020
+416,Ing.Jacobacci(7)-EEA Bariloche,Nimbus THP,Ingeniero Jacobacci,Río Negro,-41.33,-69.55,879,A872707,-,19/11/2013,11/03/2019
+254,INTA - 9 de Julio (Imetos),Imetos,9 de Julio,Buenos Aires,-35.46,-60.95,79,00000A4B,"9 de Julio, Bs As",21/12/2010,28/06/2013
+52,INTA - Abra Pampa (EMC),Convencional Instr. Completo,Cochinoca,Jujuy,-22.83,-65.85,3484,NH0457,Prov. 11 Km20 - CC 9 - 4640,01/01/1959,31/12/2007
+257,INTA - Alpachiri (Imetos),Imetos,Guatrache,La Pampa,-37.37,-63.77,145,00000A4F,"Depto de Guatraché, Alpachiri",17/12/2010,04/05/2013
+59,INTA - Alto Valle (EMC),Convencional Instr. Completo,General Roca,Río Negro,-39.01,-67.4,242,NH0230,Ruta 22 km1190 - Contralmrte.M.Guerrico - Allen,01/01/1970,31/12/2013
+53,INTA - Anguil (EMC),Convencional Instr. Completo,Capital,La Pampa,-36.5,-63.98,165,NH0446,Ruta 5 Km580 - CC11- 6326,01/01/1961,21/09/2020
+338,INTA - Añatuya,Davis,Añatuya,Santiago del Estero,-28.45,-62.83,108,D0016,"Fundación Mundo Sano Sgo del Estero, Argentina",16/04/2012,16/06/2018
+32,INTA - Balcarce (EMC),Convencional Instr. Completo,Balcarce,Buenos Aires,-37.75,-58.3,130,NH0400,"Ruta 226 Km 73,5 - C.C. 276 - (7620)",01/02/1961,17/03/2020
+33,INTA - Barrow (EMC),Convencional Instr. Completo,Tres Arroyos,Buenos Aires,-38.32,-60.25,120,NH0216,Ruta Nac.3 Km488 - C.C.50 - B7500WAA,01/01/1960,31/12/2013
+418,INTA - Basavilbaso,Imetos,Basavilbaso,Entre Rios,-32.37,-58.89,50,00000CA2,Línea 22 s/n - Basavilbaso,31/12/2011,26/10/2014
+443,INTA - Bella Vista,Imetos,Bella Vista,Corrientes,-28.45,-58.99,70,00001FBB,Ruta 27-10Km norte de Bella Vista -CC5-3432,08/10/2012,15/03/2016
+41,INTA - Bella Vista (EMC),Convencional Instr. Completo,Bella Vista,Corrientes,-28.43,-58.92,70,NH0067,Ruta 27-10Km norte de Bella Vista -CC5-3432,01/01/1959,31/08/2020
+34,INTA - Bordenave (EMC),Convencional Instr. Completo,Puan,Buenos Aires,-37.85,-63.02,212,NH0343,Ruta Provincial 76 Km. 36 - 8187,01/01/1960,31/12/2015
+323,INTA - Calafate,Davis,El Calafate,Santa Cruz,-50.34,-72.28,185,D0018,El Calafate- Santa Cruz - Argentina,16/04/2012,02/09/2019
+9,INTA - Castelar (EMC),Convencional Instr. Completo,Hurlingham,Buenos Aires,-34.61,-58.67,22,NH0358,Las Cabañas y De Los Reseros s/n,01/01/1951,13/09/2020
+39,INTA - Catamarca Sumalao (EMC),Convencional Instr. Completo,Valle Viejo,Catamarca,-28.48,-65.73,525,NH0070,Ruta Prov.33 Km 4 - 4705,01/01/1958,31/12/2007
+328,INTA - Cerrillos,Davis,Cerrillos,Salta,-24.89,-65.47,1240,D0019,Cerrillos - Salta,17/04/2012,25/03/2020
+58,INTA - Cerro Azul (EMC),Convencional Instr. Completo,Leandro N Alem,Misiones,-27.65,-55.43,283,NH0423,Ruta 14. Km1085 - CC6 - 3313,01/01/1968,14/04/2020
+354,INTA - Chubut,Davis,Trelew,Chubut,-43.27,-65.36,10,D0020,EEA Chubut - Ex Ruta Nac 25 Km 1480,27/06/2012,04/04/2020
+326,INTA - Cinco Saltos,Davis,Cinco Saltos,Río Negro,-38.84,-68.07,282,D0021,Cinco Saltos - Río Negro - ARG,16/04/2012,08/09/2016
+44,INTA - Colonia Benitez (EMC),Convencional Instr. Completo,San Fernando,Chaco,-27.42,-58.93,54,NH0487,Marcos Briolini s/n - 3505,01/01/1968,30/07/2020
+48,INTA - Conc. del Uruguay (EMC),Convencional Instr. Completo,Uruguay,Entre Rios,-32.49,-58.35,25,NH0497,"Ruta Provincial 39 Km 143,5 - 3260",01/01/1968,31/05/2015
+49,INTA - Concordia (EMC),Convencional Instr. Completo,Concordia,Entre Rios,-31.38,-58.03,48,NH0496,Ruta 22 y ffcc Est.Yuquerí CC34-E3200AQK,01/01/1969,31/01/2014
+334,INTA - Consorcio de SG,Davis,Tres Esquinas,Río Negro,-39.32,-65.75,128,D0023,CSG - Luís Beltrán - Río Negro,16/04/2012,26/08/2015
+336,INTA - Contralmirante Guerrico,Davis,Contralmirante M. Guerrico,Río Negro,-39.02,-67.67,242,D0024,Contralmirante Guerrico - Allen - Río Negro,16/04/2012,04/04/2020
+335,INTA - Coronel Belisle,Davis,Coronel Belisle,Río Negro,-39.2,-65.89,128,D0025,Establ URITRAL - Chacra 23 B,16/04/2012,15/09/2017
+40,INTA - Corrientes (EMC),Convencional Instr. Completo,Empedrado,Corrientes,-27.65,-58.77,57,NH0460,"Ruta Nacional 12, Km 1008. CC 57 - 3400",01/01/1968,07/08/2020
+390,INTA - Cuchilla,Imetos,Gualeguay,Entre Rios,-33.2,-59.26,8,000013D3,"Cuchilla Redonda, Gualeguay",31/12/2011,31/12/2018
+263,INTA - Delta,Imetos,Campana,Buenos Aires,-34.17,-58.86,1,00000A56,Depto de Campana,18/12/2010,31/12/2018
+51,INTA - El Colorado (EMC),Convencional Instr. Completo,Pirane,Formosa,-26.3,-59.38,78,NH0464,Av.Carlos Pellegrini s/n Acceso Sur- 3603,01/01/1960,28/06/2015
+419,INTA - EMA Charata,Davis,Charata,Chaco,-27.22,-61.17,103,D0001,Escuela Agropecuaria,14/11/2013,04/04/2020
+391,INTA - Escuela Maciá,Imetos,Maciá,Entre Rios,-32.16,-59.39,71,00000FCF,Ruta 30 a 2 km de Maciá,31/12/2011,31/12/2018
+423,INTA - Famailla (DAVIS),Davis,Famaillá,Tucuman,-27.05,-65.42,363,D0003,Ruta Prov. 301 km 32 (4132),03/04/2014,14/05/2015
+68,INTA - Famailla (EMC),Convencional Instr. Completo,Famaillá,Tucuman,-27.05,-65.42,363,NH0444,Ruta 301 km32 - CC 9 - 4132,01/09/1968,31/08/2020
+262,INTA - General Acha,Imetos,General Acha,La Pampa,-37.38,-64.6,252,00000A55,Depto de Utracan,20/12/2010,31/12/2018
+260,INTA - General Galarza,Imetos,General Galarza,Entre Rios,-32.72,-59.39,70.5,00000A52,"Depto de Gualeguay, Gral. Galarza",21/12/2010,28/12/2015
+54,INTA - Gral Pico (EMC),Convencional Instr. Completo,Puan,La Pampa,-35.67,-63.75,143,NH0037,Calle 13 Nº 857 - 6360,01/01/1973,03/12/2009
+35,INTA - Gral Villegas (EMC),Convencional Instr. Completo,General Villegas,Buenos Aires,-34.92,-62.73,117,NH0038,San Martín 26 - B6230DCB,01/04/1973,16/03/2020
+439,INTA - Gálvez,Imetos,Galvéz,Santa Fe,-32.03,-61.16,47,0000034B,-,30/03/2012,11/02/2016
+289,INTA - Hernando,Imetos,Hernando,Córdoba,-32.37,-63.8,292,324,-,08/03/2005,07/03/2016
+363,INTA - Hilario Ascasubi,Davis,Villarino,Buenos Aires,-39.38,-62.62,14,D0029,Hilario Ascasubi,01/03/2012,19/03/2020
+36,INTA - Hilario Ascasubi (EMC),Convencional Instr. Completo,Villarino,Buenos Aires,-39.38,-62.62,22,NH0421,Ruta 3 - Km 794 - 8142,01/06/1961,23/09/2020
+261,INTA - Intendente Alvear,Imetos,Intendente Alvear,La Pampa,-35.24,-63.59,149,00000A53,"Depto de Chapaleufú, Int. Alvear",17/12/2010,10/06/2013
+337,INTA - La Abrita,Davis,La Abrita,Santiago del Estero,-28.02,-64.22,169,D0030,Ruta Nac. Nº 9 Km. 1109,08/04/2012,04/04/2020
+56,INTA - La Consulta (EMC),Convencional Instr. Completo,Puan,Mendoza,-33.73,-69.12,740,NH0442,EX RUTA 40 km 96 - 5567,01/01/1970,23/09/2020
+67,INTA - La Maria S.Estero (EMC),Convencional Instr. Completo,Silipica,Santiago del Estero,-28.02,-64.23,169,NH0550,La María EEA INTA,01/04/1988,22/09/2020
+287,INTA - La Para,Imetos,La Para,Córdoba,-31.01,-63.02,101.5,0000030F,-,08/03/2005,12/01/2016
+341,INTA - Lago Posadas,Davis,Rio Chico,Santa Cruz,-47.57,-71.74,200,D0031,Lago Posadas - Santa Cruz - Argentina,25/04/2012,27/04/2012
+373,INTA - Las Breñas,Davis,Las Breñas,Chaco,-27.07,-61.06,102,D0032,Las Breñas,31/12/2010,21/04/2016
+45,INTA - Las Breñas (EMC),Convencional Instr. Completo,9 de Julio,Chaco,-27.1,-61.1,102,NH0416,Ruta Nac. Nº 94 - 3722,01/01/1967,20/09/2020
+322,INTA - Los Antiguos,Davis,Los Antiguos,Santa Cruz,-46.53,-71.63,254,D0033,Los Antiguos - Santa Cruz - Argentina,16/04/2012,04/04/2020
+422,INTA - Malbran,Davis,Malbrán,Santiago del Estero,-29.35,-62.44,87,D0034,"Belgrano s/n (observ.) (2354), Depto Aguirre",25/11/2013,02/03/2015
+31,INTA - Manfredi (EMC),Convencional Instr. Completo,Río Segundo,Córdoba,-31.82,-63.77,292,NH0438,Ruta Nac. nro. 9 km 636 - 5988,01/09/1969,08/05/2014
+30,INTA - Marcos Juarez (EMC),Convencional Instr. Completo,Marcos Juarez,Córdoba,-32.68,-62.12,110,NH0502,Ruta 12 km. 3 - 2580,01/10/1967,30/03/2020
+57,INTA - Mendoza (EMC),Convencional Instr. Completo,Junin,Mendoza,-33.15,-68.47,653,NH0485,San Juan Acceso Sur y Aráoz - 5507,01/09/1968,31/12/1981
+42,INTA - Mercedes Ctes (EMC),Convencional Instr. Completo,Mercedes,Corrientes,-29.17,-58.02,100,NH0498,Calle Juan Pujol s/n - CC38 - 3470,01/01/1968,31/03/2019
+321,INTA - Naineck,Davis,Formosa,Formosa,-25.2,-58.12,74,D0035,Laguna Naineck - Formosa - Argentina,,
+63,INTA - Oliveros (EMC),Convencional Instr. Completo,Iriondo,Santa Fe,-32.55,-60.85,26,NH0472,Ruta 11 km353 - 2206,01/07/1961,01/06/2017
+329,INTA - Olleros,Davis,Anta,Salta,-25.1,-64.23,400,D0036,Coronel Olleros,16/04/2012,03/04/2020
+255,INTA - Parana,Imetos,Paraná,Entre Rios,-31.86,-60.53,116.5,00000A4D,Paraná,18/12/2010,07/03/2016
+50,INTA - Parana (EMC),Convencional Instr. Completo,Paraná,Entre Rios,-31.85,-60.54,110,NH0114,"Ruta 11 Km12,5 - Oro Verde - 3101",01/04/1956,30/06/2016
+265,INTA - Pergamino,Imetos,Pergamino,Buenos Aires,-33.94,-60.58,56,00000A58,Depto de pergamino,17/12/2010,07/03/2016
+37,INTA - Pergamino (EMC),Convencional Instr. Completo,Pergamino,Buenos Aires,-33.93,-60.55,65,NH0145,"Ruta 32 Km.4,5 - B2700WAA",01/01/1931,07/05/2020
+327,INTA - Picún Leufú,Davis,Picún Leufú,Neuquen,-39.54,-69.3,393,D0037,Picún Leufú - Neuquén,16/04/2012,03/01/2019
+353,INTA - Piquete Cavado,Davis,Piquete Cavado,Salta,-24.82,-64.18,456,D0038,Ruta Prov. 30 Km. 10.,19/06/2012,02/03/2020
+333,INTA - Pomona,Davis,Pomona,Río Negro,-39.48,-65.65,127,D0039,Est. Pichi Lauquen - Pomona - Río Negro - ARG,12/02/2012,28/01/2016
+340,INTA - Potrok Aike,Davis,Ger Aike,Santa Cruz,-51.95,-70.41,132,D0040,Campo Experimental Potrok Aike,01/05/2012,17/12/2019
+330,INTA - R de la Frontera,Davis,Rosario de la Frontera,Salta,-25.82,-64.96,828,D0041,Rosario de la frontera,17/04/2012,11/05/2018
+64,INTA - Rafaela (EMC),Convencional Instr. Completo,Vera,Santa Fe,-31.18,-61.55,100,NH0098,Ruta 34 Km227 - CC 22 - 2300,01/04/1956,17/09/2020
+55,INTA - Rama Caída (EMC),Convencional Instr. Completo,San Rafael,Mendoza,-34.67,-68.38,692,NH0448,El Vivero s/n - CC 79 - 5600,01/09/1968,30/06/2008
+65,INTA - Reconquista (EMC),Convencional Instr. Completo,Reconquista,Santa Fe,-29.18,-59.7,42,NH0437,Ruta 11 km773 - S3567XAA,01/08/1970,31/08/2020
+46,INTA - Roque Saenz Peña (EMC),Convencional Instr. Completo,Comandante Fernandez,Chaco,-26.87,-60.45,90,NH0415,Ruta 95 Km - 1108,01/01/1959,01/02/2020
+302,INTA - Río Gallegos,Imetos,Río Gallegos,Santa Cruz,-51.63,-69.23,13,0000089A,Mahatma Gandhi 1322 - Río Gallegos,08/03/2005,31/12/2016
+374,INTA - Saenz Peña,Davis,Roque Saenz Peña,Chaco,-26.84,-60.44,90,D0042,Roque Saenz Peña,19/11/2012,15/05/2019
+60,INTA - Salta (EMC),Convencional Instr. Completo,Cerrillos,Salta,-24.9,-65.5,1250,NH0475,Ruta 68 Km172 - 4403 CC228 -4400,01/01/1971,31/08/2011
+331,INTA - Salta Forestal,Davis,Anta,Salta,-24.96,-63.85,348,D0043,Centro 25 de Junio - Eco Desarrollo Salta S.A.,16/04/2012,17/10/2017
+256,INTA - San Gustavo,Imetos,San Gustavo,Entre Rios,-30.73,-59.35,76.5,00000A4E,San Gustavo,17/12/2010,06/09/2016
+351,INTA - San José de Yatasto,Davis,Metan,Salta,-25.6,-64.97,829,D0044,Ruta Nac. 34 Km. 1448. Metan - Salta,07/06/2012,04/04/2020
+61,INTA - San Juan (EMC),Convencional Instr. Completo,Angaco,San Juan,-31.37,-68.32,618,NH0445,Calle 11y Vidart -Va. Aberastain - 5427,01/09/1968,31/10/2013
+370,INTA - San Martín,Davis,San Martín,Salta,-22.53,-63.52,344,D0045,Ruta Nac. 86 Km 16 - Dpto. San Martín Salta,28/10/2012,27/08/2019
+324,INTA - San Patricio,Davis,San Patricio del Chañar,Neuquen,-38.57,-68.36,334,D0046,San Patricio del Chañar - Neuquén - ARG,28/03/2012,17/07/2013
+264,INTA - San Pedro,Imetos,San Pedro,Buenos Aires,-33.77,-59.75,33,00000A57,Depto de San Pedro,17/12/2010,06/03/2016
+38,INTA - San Pedro (EMC),Convencional Instr. Completo,San Pedro,Buenos Aires,-33.68,-59.68,28,NH0492,Ruta Nac. Nº9 Km.170 (B2930ZZA),01/01/1967,23/09/2020
+388,INTA - Tostado,Davis,Tostado,Santa Fe,-29.14,-61.84,79,D0047,Tostado – Dpto. 9 de Julio – Pcia. De Santa Fe,27/02/2013,11/02/2016
+47,INTA - Trelew (EMC),Convencional Instr. Completo,Rawson,Chubut,-43.23,-65.3,10,NH0557,Ex Ruta 25 Km1480 - CC 88 - 9100,01/04/1971,31/01/2014
+464,INTA - Valle Inferior,Davis,Viedma,Río Negro,-40.8,-63.06,14,D0009,,20/07/2015,02/07/2016
+258,INTA - Victorica,Imetos,Loventue,La Pampa,-36.22,-65.43,278,00000A50,"Depto de Loventué, Victorica",17/12/2010,07/03/2016
+259,INTA - Villa Elisa,Imetos,Villa Elisa,Entre Rios,-32.17,-58.4,92.5,00000A51,"Depto de Colón, Villa Elisa",17/12/2010,26/01/2016
+62,INTA - Villa Mercedes (EMC),Convencional Instr. Completo,General Pedernera,San Luis,-33.72,-65.48,515,NH0439,Rutas 7 y 8 - 5730,01/03/1968,31/10/2013
+325,INTA - Villa Regina,Davis,Villa Regina,Río Negro,-39.13,-67.11,158,D0049,Villa Regina - Río Negro - ARG,16/04/2012,16/09/2015
+345,INTA - Yuto,Davis,Yuto,Jujuy,-23.59,-64.51,398,D0050,Ruta Nac. 34 Km. 1286 (4518),21/05/2012,04/04/2020
+43,INTA DELTA del Parana (EMC),Convencional Instr. Completo,Campana,Buenos Aires,-34.18,-58.86,1,NH0990,R Paraná y Cnl. Comas-4 sección de islas (2804),01/01/1967,31/12/1990
+590,Isla Apipe,Omixom,Sin asignar,Corrientes,-27.51,-56.76,0,92009,Ituzaingo,31/03/2017,12/01/2019
+561,Isletas,Omixom,Sin asignar,Entre Rios,-32.22,-60.36,0,91040,Diamante,31/03/2017,12/01/2019
+596,Ita Ibate,Omixom,Sin asignar,Corrientes,-27.44,-57.38,0,92016,General Paz,31/03/2017,24/10/2018
+428,Ituzaingo (7) - EEA Corrientes,Nimbus THP,Ituzaingo,Corrientes,-27.55,-56.56,92,A872704,Ruta Nac. N° 12,18/12/2013,26/09/2019
+672,Ituzaingo - EEA Corrientes,Nimbus THP,Ituzaingo,Corrientes,-27.54,-56.58,20,A872971,Ituzaingo,26/09/2019,22/09/2020
+396,J J Castelli - EEA Sáenz Peña,Nimbus THP,Castelli,Chaco,-25.94,-60.61,121.5,A872902,"Ruta 9 S/n. CP: 3705, Dto. Gral Guemes",19/12/2012,23/09/2020
+298,J. B. Molina - EEA Oliveros,Nimbus THP,J.B. Molina,Santa Fe,-33.48,-60.53,100,A872706,"Zona Rural, 2103, CP: 2103",30/11/2011,24/03/2017
+553,Jubileo,Omixom,Sin asignar,Entre Rios,-31.71,-58.64,0,91031,Villaguay,31/03/2017,12/01/2019
+252,Jumial Grande - EEA E Santiago,Nimbus THP,Jumial Grande,Santiago del Estero,-27.43,-63.36,145,A872813,,02/05/2011,23/09/2020
+454,Junín - EEA Junin Mendoza,Nimbus THP,Junin,Mendoza,-33.12,-68.48,654,A872938,"Isidoro Bousquet S/Nº, La Colonia, CP:5572",12/12/2016,14/10/2018
+515,La Cigüeña - EEA Reconquista,Nimbus THP,Fortin Olmos,Santa Fe,-29.25,-61.02,67,A872962,"Paraje La Cigueña, RP 98 y RP 13 Dto Vera",07/06/2016,23/09/2020
+284,La Colmena - EEA Paraná,Nimbus THP,La Colmena,Entre Rios,-31.55,-59.72,75,A872874,Paraje La Colmena. Ruta Nac. 127. km 88,13/10/2011,21/12/2018
+482,La Consulta - EEA Consulta,Nimbus THP,San Carlos,Mendoza,-33.77,-69.15,769,A872939,"La Consulta, San Carlos, Mendoza",22/07/2015,23/09/2020
+526,La Criolla,Omixom,Sin asignar,Entre Rios,-31.3,-58.08,0,91060,Concordia,31/03/2017,12/01/2019
+651,La Cruz,Omixom,Sin asignar,Corrientes,-29.18,-56.67,0,32013,San Martín,31/03/2017,12/01/2019
+241,La Dulce - EEA Balcarce,Nimbus THP,Necochea,Buenos Aires,-38.34,-59.01,72,A872808,Ruta Provincial 86 km 36. Necochea,12/11/2010,23/09/2020
+433,La Guevarina - EEA Rama Caida,Nimbus THP,La Guevarina,Mendoza,-34.79,-68.02,550,A872934,Ruta Nac. 143. Dto San Rafael. CP: 5622,03/09/2014,23/09/2020
+387,La Leonesa - EEA Col Benitez,Nimbus THP,La Leonesa,Chaco,-27.05,-58.71,70,A872892,-,12/12/2012,08/02/2020
+623,La Paz,Omixom,Sin asignar,Entre Rios,-30.8,-59.59,0,91084,La Paz,31/03/2017,11/12/2018
+646,La Paz 2,Omixom,Sin asignar,Entre Rios,-30.74,-59.56,0,31010,La Paz,31/03/2017,13/01/2019
+534,La Picada,Omixom,Sin asignar,Entre Rios,-31.71,-60.32,0,91010,Parana,31/03/2017,12/01/2019
+441,Laguna Yema (DAVIS),Davis,Laguna Yema,Formosa,-24.28,-61.24,158,D0002,Laguna Yema,07/04/2014,03/04/2020
+535,Larroque,Omixom,Sin asignar,Entre Rios,-33.05,-59.01,0,91013,Gualeguaychu,31/03/2017,12/01/2019
+368,Las Armas - EEA Cuenca Salado,Nimbus THP,Las Armas,Buenos Aires,-37.09,-57.87,28,A872833,"R.P. Nº 74 km 90.5, C.P.: 7172",25/10/2012,23/09/2020
+529,Las Delicias,Omixom,Sin asignar,Entre Rios,-31.92,-60.42,0,91005,Parana,31/03/2017,12/01/2019
+470,Las Lajitas,Davis,Las Lajitas,Salta,-24.74,-64.25,490,D0011,Ruta Prov. Nº 5 Km. 93.5,11/11/2014,12/03/2020
+527,Las Moscas,Omixom,Sin asignar,Entre Rios,-32.1,-58.97,0,91020,Uruguay,09/10/2017,19/07/2018
+400,Las Piedritas - EEA Las Breñas,Nimbus THP,Las Piedritas,Chaco,-26.82,-61.61,141.100006103516,A872895,Camino vecinal s/n CP: 3722 Dto. 9 de Julio,25/09/2012,23/09/2020
+663,Las Rosas (EMC),Convencional Instr. Completo,Las Rosas,Santa Fe,-32.48,-61.57,0,NH0910,Establecimiento privado,01/01/1975,31/07/2017
+297,Las Rosas - EEA Oliveros,Nimbus THP,Las Rosas,Santa Fe,-32.49,-61.57,100,A872868,"Ruta Nacional 178-Km 201, CP: 2520",29/11/2011,23/09/2020
+288,Las Tunas - EEA Paraná,Nimbus THP,Las Tunas,Entre Rios,-31.87,-59.68,83,A872876,Paraje Las Tunas. Ruta Nac. 18. Km 85.,12/10/2011,23/09/2020
+230,Lima - EEA San Pedro,Nimbus THP,Lima,Buenos Aires,-34.08,-59.21,28,A872834,Ruta 9 - Km 100 - Lima,25/08/2010,27/02/2020
+475,Lincoln - EEA Villegas,Nimbus THP,General Lincoln,Buenos Aires,-34.84,-61.6,109.800003051758,A872942,"Ruta 188, Km 225 (1.5 km por camino rural) CP 6070",01/12/2014,23/09/2020
+267,Llavallol - ICyA CIRN,Nimbus THP,Llavallol,Buenos Aires,-34.79,-58.45,23,A872810,"Ruta Prov. Nº 4, km 2, Lavallol. CP:1836",21/07/2011,23/09/2020
+469,Loma Chata - EEA Barrow,Nimbus THP,Coronel Dorrego,Buenos Aires,-38.65,-61.45,159.800003051758,A872839,0,13/11/2014,06/07/2018
+347,Los Arrieta - EEA Famailla,Nimbus THP,Los Arrieta,Tucuman,-27.29,-65.33,321,A872714,"RP 326,2 km al O de Simoca(RN 157 y RP 325)CP:4172",16/03/2012,12/12/2019
+544,Los Conquistadores,Omixom,Sin asignar,Entre Rios,-30.52,-58.4,0,31009,Federacion,05/12/2017,01/05/2018
+498,Los Juríes - EEA E Santiago,Nimbus THP,Los Juríes,Santiago del Estero,-28.61,-62.16,78,A872956,Ruta 13 (a 5Km al Sur del pueblo) CP: 3763,08/09/2015,23/09/2020
+642,Lucas Gonzalez,Omixom,Sin asignar,Entre Rios,-32.41,-59.55,0,31005,Nogoya,31/03/2017,14/01/2019
+618,Lucas Norte,Omixom,Sin asignar,Entre Rios,-31.38,-58.91,0,91078,Villaguay,15/11/2017,12/01/2019
+626,Lucas Sur,Omixom,Sin asignar,Entre Rios,-31.64,-58.96,0,91087,Villaguay,31/03/2017,12/01/2019
+277,M Juarez - EEA Marcos Juarez,Nimbus THP,Marcos Juarez,Córdoba,-32.72,-62.11,110,A872827,Ruta 12 Km. 3 C.P.: 2580,13/09/2011,12/08/2020
+537,Macia,Omixom,Sin asignar,Entre Rios,-32.15,-59.41,0,91082,Tala,31/03/2017,17/03/2018
+290,Maciá - EEA Conc. Uruguay,Nimbus THP,Maciá,Entre Rios,-32.17,-59.39,67.5,A872832,"Zona Rural Maciá, Departamento Tala",12/10/2011,01/10/2018
+434,Malargüe - EEA Rama Caida,Nimbus THP,Malargüe,Mendoza,-35.38,-69.57,1421,A872935,"Ruta Nac. 40, El Chacay Malargüe (CP 5613)",11/11/2015,22/07/2019
+364,Malbran - EEA E Sgo del Estero,Nimbus THP,Malbrán,Santiago del Estero,-29.32,-62.46,82,A872961,"Ruta Nacional 34, Km 467.5 C.P: 2354 Dto Aguirre",02/06/2016,23/09/2020
+372,Manfredi - EEA Manfredi,Nimbus THP,Manfredi,Córdoba,-31.86,-63.75,292,A872907,"Ruta Nac. nro. 9, km 636. C.P: 5988, Córdoba",14/11/2012,23/09/2020
+627,Mansilla,Omixom,Sin asignar,Entre Rios,-32.48,-59.33,0,91088,Tala,31/03/2017,12/01/2019
+570,Maria Grande,Omixom,Sin asignar,Entre Rios,-31.69,-59.91,0,91050,Parana,31/03/2017,12/01/2019
+531,Maria Grande 2da.,Omixom,Sin asignar,Entre Rios,-31.69,-59.65,0,91008,Parana,23/05/2017,25/10/2017
+647,Mbocaya,Omixom,Sin asignar,Corrientes,-28.41,-57.92,0,32010,Concepcion,31/03/2017,12/01/2019
+447,Medanos - EEA Hilario Ascasubi,Nimbus THP,Medanos,Buenos Aires,-38.87,-62.66,29,A872840,"5 Km al sur de Medanos, C.P.: 8132 Pdo. Villarino",12/11/2014,23/09/2020
+440,Mercedes - EEA Mercedes,Nimbus THP,Mercedes,Corrientes,-29.2,-58.04,99,A872915,Calle Juan Pujol s/n - CC38 - 3470,11/02/2014,23/09/2020
+240,Miramar - EEA Balcarce,Nimbus THP,Miramar,Buenos Aires,-38.15,-57.99,12,A872819,"Ruta Nº 77, km.20. CP:7607 Gral Alvarado",11/11/2010,23/09/2020
+536,Mojones,Omixom,Sin asignar,Entre Rios,-31.56,-59.21,0,91004,Villaguay,18/04/2017,12/01/2019
+572,Mojones Norte,Omixom,Sin asignar,Entre Rios,-31.48,-59.33,0,91052,Villaguay,31/03/2017,12/01/2019
+550,Mojones Sur,Omixom,Sin asignar,Entre Rios,-31.65,-59.2,0,91028,Villaguay,31/03/2017,12/01/2019
+552,Molino Doll,Omixom,Sin asignar,Entre Rios,-32.33,-60.4,0,91030,Victoria,31/03/2017,12/01/2019
+601,Monte Caseros,Omixom,Sin asignar,Corrientes,-30.25,-57.68,0,92023,Monte Caseros,31/03/2017,19/12/2018
+496,Monte Quemado - EEA E Santiago,Nimbus THP,Monte Quemado,Santiago del Estero,-25.86,-62.71,203,A872954,"Ruta 16 - km 427,5",10/09/2015,14/02/2020
+409,Montecarlo - EEA Montecarlo,Nimbus THP,Montecarlo,Misiones,-26.57,-54.73,200,A872911,"Av. El Libertador 2472, CP: 3384",22/08/2013,23/09/2020
+568,Montoya,Omixom,Sin asignar,Entre Rios,-32.58,-59.89,0,91048,Victoria,31/03/2017,12/01/2019
+595,Mora Cue,Omixom,Sin asignar,Corrientes,-28.36,-56.16,0,92005,Santo Tome,19/06/2017,12/01/2019
+542,Moreira,Omixom,Sin asignar,Entre Rios,-31.22,-58.31,0,91017,Concordia,31/03/2017,04/08/2018
+414,Morillo - EEA Salta,Nimbus THP,Coronel J. Sola,Salta,-23.46,-62.89,220,A872880,San Martín s/n e/ Belgrano y R8. CP; 4554,06/09/2013,01/04/2018
+575,Mulitas,Omixom,Sin asignar,Entre Rios,-30.37,-58.98,0,91055,Feliciano,14/11/2017,02/12/2018
+555,Nogoyá,Omixom,Sin asignar,Entre Rios,-32.41,-59.81,0,91034,Nogoyá,31/03/2017,12/01/2019
+503,Nueva Pompeya - EEA Sáenz Peña,Nimbus THP,Nueva Pompeya,Chaco,-24.9,-61.47,173.800003051758,A872959,km 6; Depto Güemes,01/12/2015,04/03/2019
+548,Oro Verde,Omixom,Sin asignar,Entre Rios,-31.85,-60.52,0,91026,Parana,31/03/2017,12/01/2019
+379,P de Los Llanos - EEA La Rioja,Nimbus THP,Punta de Los Llanos,La Rioja,-30.15,-66.55,308,A872888,-,04/06/2012,23/09/2020
+281,P Golondrinas - EEA Bariloche,Nimbus THP,Lago Puelo,Chubut,-41.96,-71.52,340,A872850,"Ruta 40km 1911, Pje Las Golondrinas",18/10/2011,19/06/2019
+445,P. de la Plaza -EEA Sáenz Peña,Nimbus THP,Presidencia de La Plaza,Chaco,-26.93,-59.8,75,A872901,Ruta 7 S/n CP: 3536 Dto. Pres de La Plaza,18/12/2012,11/11/2019
+500,P. Roca - EEA El Colorado,Nimbus THP,Presidencia Julio A. Roca,Chaco,-26.15,-59.58,90.8000030517578,A872960,"Paraje La Sirena, Cochiñilae",30/11/2015,23/09/2020
+563,Pajonal,Omixom,Sin asignar,Entre Rios,-32.48,-60.31,0,91043,Victoria,31/03/2017,12/01/2019
+616,Palavecino,Omixom,Sin asignar,Entre Rios,-32.92,-58.74,0,91076,Gualeguaychu,31/03/2017,12/01/2019
+395,Palma Sola - EEA Yuto,Nimbus THP,Palma Sola,Jujuy,-23.98,-64.3,680,A872882,Av.Dardo Dominguez s/n CP: 4501,27/01/2012,23/09/2020
+603,Palmita - Perugorria,Omixom,Sin asignar,Corrientes,-29.32,-58.8,0,92027,Curuzú Cuatiá,01/04/2017,10/01/2019
+485,Palo Santo - ICyA CIRN,Nimbus THP,Palo Santo,Formosa,-25.57,-59.34,89,A872944,-,06/08/2015,06/11/2017
+501,Pampa Infierno -EA Sáenz Peña,Nimbus THP,Pampa del Infierno,Chaco,-26.5,-61.2,149.699996948242,A872957,"Ruta 16; Km 262,5; CP: 3708",02/12/2015,23/09/2020
+582,Paraná,Omixom,Sin asignar,Entre Rios,-31.73,-60.53,0,91063,Paraná,31/03/2017,12/01/2019
+483,Pareditas - EEA Consulta,Nimbus THP,San Carlos,Mendoza,-33.95,-69.08,1162,A872940,Escuela 4-211 Miguel Ángel Funes,22/07/2015,23/09/2020
+604,Parque Nacional Mburucuya,Omixom,Sin asignar,Corrientes,-28.04,-58.1,0,92028,Mburucuya,31/03/2017,11/09/2018
+679,Paso de Indios - EEA Chubut,Nimbus THP,Paso de Indios,Chubut,-43.86,-69.05,100,A872856,9 de Julio y Gmo. Rawson,27/09/2019,04/02/2020
+283,Paso de Indios(7) - EEA Chubut,Nimbus THP,Paso de Indios,Chubut,-43.36,-68.58,513,A872702,Ruta Prov Nº 12 - Paso Berwyn - CP: 9207,30/08/2011,25/12/2018
+584,Paso de la Arena,Omixom,Sin asignar,Entre Rios,-31.75,-60.11,0,91065,Parana,31/03/2017,12/01/2019
+276,Paso del Sapo - EEA Esquel,Nimbus THP,Paso del Sapo,Chubut,-42.74,-69.6,395,A872852,"Ruta 12 km 116, CP:9201",31/08/2011,09/01/2020
+641,Perdices,Omixom,Sin asignar,Entre Rios,-33.23,-58.7,0,31004,Gualeguaychú,31/03/2017,14/01/2019
+619,Picada Veron,Omixom,Sin asignar,Entre Rios,-30.85,-59.39,0,91079,La Paz,31/03/2017,12/01/2019
+493,Pje Galarza - EEA Mercedes,Nimbus THP,Santo Tome,Corrientes,-28.16,-56.71,80,A872703,---,14/10/2015,09/05/2019
+519,Plottier - IPAF Patagonia,Nimbus THP,Plottier,Neuquen,-38.95,-68.33,283,A872947,-,01/11/2016,14/02/2020
+444,Pocito - EEA San juan,Nimbus THP,Pocito,San Juan,-31.66,-68.59,618,A872929,"Calle 11y Vidart, Va. Aberastain - 5427",28/03/2014,23/09/2020
+660,Posadas Sede,EBY,Sin asignar,Sin asignar,-27.37,-55.89,0,EBY79,Emplazado en la Sede Posadas de la Entidad Bin...,,
+653,Presa,EBY,Sin asignar,Sin asignar,-27.48,-56.71,0,EBY24,Emplazado en la zona de la esclusa.,12/06/2017,17/12/2017
+609,Pueblo Brugo,Omixom,Sin asignar,Entre Rios,-31.43,-60.09,0,91068,Parana,31/03/2017,14/11/2017
+543,Pueblo Cazes,Omixom,Sin asignar,Entre Rios,-32,-58.53,0,91022,Colon,20/09/2017,12/01/2019
+350,Puerto Piramides - EEA Chubut,Nimbus THP,Puerto Pirámides,Chubut,-42.54,-64.29,85,A872855,Ruta Prov Nº2 (Altura Pto. Piramides),17/05/2012,29/01/2020
+497,Quimilí - EEA E Santiago,Nimbus THP,Quimilí,Santiago del Estero,-27.54,-62.35,137,A872955,"Ruta Provincial 6, Km 14. CP: 3740",09/09/2015,23/08/2020
+292,Rafaela - EEA Rafaela,Nimbus THP,Rafaela,Santa Fe,-31.2,-61.5,9977,A872862,"Ruta 34 Km 227, CP 2300",18/11/2011,23/09/2020
+640,Raices,Omixom,Sin asignar,Entre Rios,-31.82,-59.22,0,31003,Villaguay,03/05/2017,14/01/2019
+432,Rama Caida - EEA Rama Caida,Nimbus THP,Rama Caída,Mendoza,-34.67,-68.39,692,A872933,El vivero s/n. Dto. San Rafael. CP:5603,19/03/2014,23/09/2019
+586,Ramada Paso,Omixom,Sin asignar,Corrientes,-27.29,-58.32,0,92004,Itati,31/03/2017,24/10/2018
+541,Ramirez,Omixom,Sin asignar,Entre Rios,-32.15,-60.19,0,91018,Diamante,31/03/2017,12/01/2019
+473,Rauch - EEA Cuenca Salado,Nimbus THP,Rauch,Buenos Aires,-36.8,-59.11,103,A872837,,20/11/2014,23/09/2020
+608,Raíces Oeste,Omixom,Sin asignar,Entre Rios,-31.85,-59.56,0,91067,Villaguay,31/03/2017,29/10/2017
+294,Reconquista - EEA Reconquista,Nimbus THP,Reconquista,Santa Fe,-29.26,-59.71,75,A872865,"Ruta 11 Km 773, CP:3560",11/11/2011,04/08/2019
+394,Recreo - EEA Catamarca,Nimbus THP,Recreo,Catamarca,-29.28,-65.08,226,A872886,"Ruta Prov. N 20 s/n, Dto. La PazCP: 5260",27/02/2013,05/08/2018
+644,Rincon del Gená,Omixom,Sin asignar,Entre Rios,-32.52,-58.58,0,31007,Uruguay,04/07/2017,13/01/2019
+661,Rincon Ombu,EBY,Sin asignar,Sin asignar,-27.32,-56.37,0,EBY25,Emplazado sobre la margen izquierda del Rio pa...,12/06/2017,18/12/2017
+556,Rincón de Nogoyá,Omixom,Sin asignar,Entre Rios,-32.78,-59.91,0,91035,Victoria,31/03/2017,12/01/2019
+300,Rio Colorado - EEA Alto Valle,Nimbus THP,Río Colorado,Río Negro,-39.02,-64.08,79,A872847,Moreno 695. CP: 8138,05/06/2012,23/09/2020
+446,Rio Gallegos - EEA Santa Cruz,Nimbus THP,Río Gallegos,Santa Cruz,-51.38,-69.14,20,A872858,"Mahatma Ghandi 1322, CP: 9400",18/03/2015,24/04/2015
+231,Rio Tala - EEA San Pedro,Nimbus THP,Rio Tala,Buenos Aires,-33.77,-59.63,29,A872835,"Ruta Provincial 1001, km 10,5 CP: 2944",31/08/2010,23/09/2020
+455,Rivadavia - EEA Junin Mendoza,Nimbus THP,Sarmiento,Mendoza,-33.26,-68.5,614,A872937,"Carril Florida s/n, La Libertad, CP:5579",06/01/2017,14/01/2017
+506,Rosario de Lerma,Davis,Rosario de Lerma,Salta,-24.99,-65.59,1330,D0056,Unidad Carcelaria N°6,07/01/2016,03/04/2020
+622,Rosario del Tala,Omixom,Sin asignar,Entre Rios,-32.33,-59.19,0,91083,Tala,31/03/2017,12/01/2019
+249,S.J. Frontera - EEA Concordia,Nimbus THP,San Jaime de la Frontera,Entre Rios,-30.36,-58.32,77,A872803,"Ruta 127, a 2 km de S.J. de la Frontera",15/12/2010,23/09/2020
+250,Sachayoj - EEA E Santiago,Nimbus THP,Sachayoj,Santiago del Estero,-26.46,-61.81,197,A872812,-,27/12/2010,23/09/2020
+606,San Carlos,Omixom,Sin asignar,Corrientes,-27.68,-56.01,0,92030,Ituzaingo,17/06/2017,12/01/2019
+662,San Fernando - EEA Delta,Nimbus THP,Tigre,Buenos Aires,-34.25,-58.61,3,A872802,Arroyo Durazno. 2° Sección de Islas.,08/02/2018,23/09/2020
+457,San Francisco de Laishi,Davis,Misión San Francisco de Laishí,Formosa,-26.24,-58.64,71,D0005,Ruta Provincial N° 1 - Km. 47,07/07/2014,16/12/2015
+540,San Gustavo,Omixom,Sin asignar,Entre Rios,-30.7,-59.45,0,91015,La Paz,31/03/2017,12/01/2019
+499,San Isidro - EEA Bella Vista,Nimbus THP,San Isidro,Corrientes,-29.48,-59.3,39,A872713,--,16/10/2015,14/04/2018
+613,San Jaime de la Frontera,Omixom,Sin asignar,Entre Rios,-30.36,-58.23,0,91073,Federacion,31/03/2017,12/01/2019
+291,San Jorge - EEA Rafaela,Nimbus THP,San Jorge,Santa Fe,-31.95,-61.83,2,A872863,"Ruta 13, 10 km al S de San Jorge",22/07/2013,23/09/2020
+676,San José - EEA La Consulta,Nimbus THP,San Jose,Mendoza,-33.32,-69.16,100,A872941,A definir,27/11/2019,23/09/2020
+591,San Lorenzo,Omixom,Sin asignar,Corrientes,-28.17,-58.7,0,92010,Saladas,31/03/2017,02/01/2019
+232,San Nicolas(7)- EEA San Pedro,Nimbus THP,San Nicolás,Buenos Aires,-33.36,-60.23,37,A872709,Calle Pringles Nº 1150.CP: 2902 Cuartel IX,07/09/2010,16/05/2019
+669,San Nicolás - EEA San Pedro,Nimbus THP,San Nicolás,Buenos Aires,-33.39,-60.2,10,A872948,"Estanislao del Campo s/n, San Nicolás.",03/06/2019,11/12/2019
+358,San Pedro - EEA San Pedro,Nimbus THP,San Pedro,Buenos Aires,-33.74,-59.8,26,A872890,"Ruta 9, km 170 CP: 2930",12/07/2012,22/09/2020
+637,San Roque,Omixom,Sin asignar,Corrientes,-28.6,-58.73,0,32005,San Roque,31/03/2017,13/01/2019
+339,San Sebastian - EEA Santa Cruz,Nimbus THP,San Sebastian,Tierra del Fuego,-52.89,-68.45,19.7999992370605,A872859,Ruta nacional Nº 3,28/03/2012,14/04/2019
+412,San Vicente - EEA Cerro Azul,Nimbus THP,San Vicente,Misiones,-26.92,-54.42,534,A872910,"Ruta 14 KM 1025, CP: 3364",24/08/2013,23/09/2020
+614,Santa Elena,Omixom,Sin asignar,Entre Rios,-30.99,-59.68,0,91074,La Paz,31/03/2017,12/01/2019
+460,Santa Magdalena,Imetos,Santa Magdalena,Salta,-24.52,-64.13,443,2646,Departamento ANTA,12/12/2013,31/12/2018
+407,Santa Rosa - EEA Bella Vista,Nimbus THP,Concepción,Corrientes,-28.27,-58.13,82.4000015258789,A872917,Ruta 118,17/07/2013,17/11/2019
+456,Santa Rosa - EEA Junin Mendoza,Nimbus THP,Santa Rosa,Mendoza,-33.18,-67.87,563.799987792969,A872936,La Cieneguita Santa Rosa Mendoza CP: 5596,17/08/2017,03/09/2017
+376,Santa Sylvina - EEA Sáenz Peña,Nimbus THP,Santa Sylvina,Chaco,-27.85,-61.13,90,A872900,Ruta 5 S/n. CP: 3541. Dto. F J Sta María de Oro,07/12/2012,11/01/2019
+369,Santa Victoria Este - EEA Yuto,Nimbus THP,Santa Victoria Este,Salta,-22.27,-62.71,269.600006103516,A872881,,27/01/2012,12/03/2018
+467,Sarmiento - Chubut,Davis,Sarmiento,Chubut,-45.61,-69.07,280,D0052,Escuela N° 725 - Sarmiento,01/11/2014,04/04/2020
+282,Sarmiento - EEA Chubut,Nimbus THP,Sarmiento,Chubut,-45.6,-69.03,267,A872857,"Ruta Nac. Nº 26 - Chacra Nº 19, CP: 9020",16/09/2011,22/06/2017
+615,Sauce,Omixom,Sin asignar,Entre Rios,-32.56,-59.63,0,91075,Nogoyá,31/03/2017,12/01/2019
+571,Sauce de Luna,Omixom,Sin asignar,Entre Rios,-31.11,-59.29,0,91051,Federal,31/03/2017,12/01/2019
+352,Seclantas - EEA Salta,Nimbus THP,Seclantas,Salta,-25.33,-66.25,2120,A872878,"Cornejo s/nº CP: 4419, Departamento Molinos.",14/03/2012,23/09/2020
+532,Segui,Omixom,Sin asignar,Entre Rios,-31.96,-60.13,0,91007,Parana,31/03/2017,12/01/2019
+633,Segundo Cuartel,Omixom,Sin asignar,Entre Rios,-32.38,-59.12,0,91098,Tala,31/03/2017,11/01/2019
+624,Sexto Distrito,Omixom,Sin asignar,Entre Rios,-32.85,-59.62,0,91085,Gualeguay,31/03/2017,12/01/2019
+587,Sociedad Rural Sauce,Omixom,Sin asignar,Corrientes,-30.1,-58.79,0,92001,Sauce,31/03/2017,01/01/2019
+421,Sombrerito - EEA Corrientes,Nimbus THP,El Sombrerito,Corrientes,-27.65,-58.77,78.5999984741211,A872916,"RN12, Km. 1008, CP: 3400",16/12/2013,23/09/2020
+494,Sta Victoria O -EEA Abra Pampa,Nimbus THP,Santa Victoria Oeste,Salta,-22.25,-64.96,2367,A872924,Avda. 24 de Septiembre s/n - Santa Victoria Oeste,01/07/2015,09/10/2018
+533,Strobel,Omixom,Sin asignar,Entre Rios,-32.05,-60.6,0,91012,Diamante,31/03/2017,12/01/2019
+448,Stroeder -EEA Hilario Ascasubi,Nimbus THP,Stroeder,Buenos Aires,-40.18,-62.61,21,A872842,A 1 km de RN 3 km 900 (por camino vecinal),30/11/2015,23/09/2020
+392,Sumalao - EEA Catamarca,Nimbus THP,Sumalao,Catamarca,-28.47,-65.73,527,A872884,"Ruta Prov. n° 33 km 4, CP:4705",09/11/2012,24/04/2019
+610,Tacuara,Omixom,Sin asignar,Entre Rios,-30.56,-59.52,0,91070,La Paz,31/03/2017,25/12/2018
+466,Telsen - Chubut,Davis,Telsen,Chubut,-42.43,-66.89,347,D0053,Telsen - Escuela N° 95,30/10/2014,05/03/2020
+461,Tilisarao - EEA San Luis,Nimbus THP,Tilisarao,San Luis,-32.67,-65.23,728.799987792969,A872931,Autopista 55 Km 886.0,01/09/2014,23/09/2020
+245,Tornquist - EEA Bordenave,Nimbus THP,Tornquist,Buenos Aires,-38.12,-62.24,280,A872825,Acc. Tornquist a Ruta Nac. 33,24/11/2010,23/09/2020
+507,Trancas - EEA Famaillá,Nimbus THP,Famaillá,Tucuman,-26.28,-65.27,771.099975585938,A872877,-,16/12/2015,24/10/2018
+367,Trenque Lauquen - EEA Villegas,Nimbus THP,Trenque Lauquen,Buenos Aires,-35.97,-62.77,57,A872906,Uribarri S/N,27/09/2012,23/09/2020
+630,Tres bocas,Omixom,Sin asignar,Entre Rios,-32.75,-59.76,0,91092,Gualeguay,31/03/2017,12/01/2019
+665,Tres Cerros - EEA Mercedes,Nimbus THP,San Martin,Corrientes,-29.07,-57.04,97,A872897,"Ruta Prov. 114 km 40, 3°Sec San Martín, La Cruz",22/06/2018,18/11/2019
+611,Tres Esquinas,Omixom,Sin asignar,Entre Rios,-32.25,-59.93,0,91014,Nogoyá,31/03/2017,04/01/2019
+285,Tres Esquinas - EEA Parana,Nimbus THP,Tres Esquinas,Entre Rios,-32.36,-60.35,88,A872715,"Paraje Tres Esquinas.Ruta 11, KM 80,5",11/10/2011,26/03/2017
+66,UNR - Zavalla (EMC),Convencional Instr. Completo,Puan,Santa Fe,-33.02,-60.88,50,NH0046,xxxxxxxxxxxxx,01/01/1973,31/08/2019
+557,Urdinarrain,Omixom,Sin asignar,Entre Rios,-32.7,-58.86,0,91036,Gualeguaychu,31/03/2017,12/01/2019
+386,V Miguel Lanus -EEA Cerro Azul,Nimbus THP,Villa Miguel Lanus,Misiones,-27.43,-55.89,120,A872909,"Ruta Nacional 12 km 7,5, CP: 3304",27/02/2013,22/09/2020
+451,Valcheta - EEA Valle Inferior,Nimbus THP,Viedma,Río Negro,-40.72,-66.31,207,A872716,Valle de Chanquin,18/07/2014,18/11/2019
+628,Viale,Omixom,Sin asignar,Entre Rios,-31.86,-60.03,0,91089,Parana,31/03/2017,12/01/2019
+275,Viamonte - ICyA CIRN,Nimbus THP,Viamonte,Córdoba,-33.83,-63.02,132,A872861,Z Rural Gral Viamonte. CP:2651 (a 8 km de ruta 3),23/05/2012,23/09/2020
+564,Victoria,Omixom,Sin asignar,Entre Rios,-32.59,-60.16,0,91044,Victoria,31/03/2017,12/01/2019
+511,Villa Ana - EEA Reconquista,Nimbus THP,Villa Ana,Santa Fe,-28.44,-59.8,85,A872963,"RP 295, Km 19. Dto. Vera, Juridiccion Golondrina",31/05/2016,23/09/2020
+299,Villa Cañas - EEA Oliveros,Nimbus THP,Villa Cañas,Santa Fe,-33.96,-61.63,121,A872870,"Ruta Prov. 94, km 34,5, CP: 2607",01/12/2011,22/09/2020
+477,Villa Dolores - EEA Manfredi,Nimbus THP,Manfredi,Córdoba,-31.94,-65.22,707.700012207031,A872826,-,21/08/2015,23/09/2020
+558,Villa Elisa,Omixom,Sin asignar,Entre Rios,-32.15,-58.41,0,91011,Colon,31/03/2017,12/01/2019
+246,Villa Iris - EEA Bordenave,Nimbus THP,Villa Iris,Buenos Aires,-37.94,-63.79,182,A872711,14 km al sur de Villa Iris,03/03/2011,01/04/2011
+420,Villa Mercedes - EEA San Luis,Nimbus THP,Villa Mercedes,San Luis,-33.66,-65.41,515,A872930,"Rutas 7 Km 591, CP: 5730",19/08/2014,23/09/2020
+538,Villaguay,Omixom,Sin asignar,Entre Rios,-31.81,-59.02,0,91009,Villaguay,31/03/2017,17/07/2018
+366,Villalonga - EEA H Ascasubi,Nimbus THP,Villalonga,Buenos Aires,-39.92,-62.62,15,A872841,"Villalonga, CP: 8512 Partido de Patagones",19/09/2012,23/09/2020
+634,Virasoro,Omixom,Sin asignar,Corrientes,-28.09,-56.03,0,32001,Virasoro,31/03/2017,13/01/2019
+607,Yerua,Omixom,Sin asignar,Entre Rios,-31.52,-58.19,0,91066,Concordia,01/04/2017,12/01/2019
+654,Zaiman Inta,EBY,Sin asignar,Sin asignar,-27.43,-55.89,0,EBY02,Emplazado en las instalaciones del INTA Posadas.,12/06/2017,26/12/2017
