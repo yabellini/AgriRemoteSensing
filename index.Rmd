@@ -1,0 +1,151 @@
+---
+title: "Sensoramiento remoto con R aplicado a la agricultura"
+---
+
+## ¿De qué se trata este curso?
+
+Este curso está pensado para [personas](personas.html) que ya tienen conocimientos de teledetección y usan Google Earth Engine (GEE) y quieren empezar a usarlo desde R. Tienen algo de experiencia utilizando R o algún otro lenguaje de programación pero buscan organizar mejor su trabajo y generar resultados e informes para compartir.
+
+Proponemos trabajar con R de forma ordenada y reproducible. Por ello, presentamos un flujo de trabajo que permite a quienes realicen este curso aplicar buenas prácticas de programación, trabajar de forma colaborativa y presentar su trabajo en un único documento que incluya el análisis y los resultados.
+
+Veremos conceptos básicos de datos espaciales, los paquetes disponibles en R para trabajar con este tipo de datos y nos enfocaremos en el paquete rgee para el uso de Google Earth Engine desde R. 
+
+En cada sección incluimos actividades junto con ejemplos. Queremos que estos ejercicios sean realistas para que cualquiera pueda encontrar similitudes en sus propios datos y pueda aplicar lo aprendido a otras situaciones.
+
+
+## Antes de empezar
+
+### Google Earth Engine
+Necesitamos que te registres en la herramienta para poder utilizarla durante el curso, para ello debes entrar en este link:
+
+https://signup.earthengine.google.com/
+
+### R y RStudio
+
+Asumimos que tenes instalado R y RStudio, si no es así [seguí estas intrucciones](90-instalacion.html).
+
+### Paquetes para trabajo con datos
+`install.packages("tidyverse")`
+
+### Paquetes de R para trabajar con datos espaciales
+
+Vas a tener que instalar una serie de paquetes que te permiten trabajar con datos espaciales.
+
+
+#### Paquetes para trabajo con datos espaciales: r-spatial
+
+```{r eval=FALSE}
+install.packages("sf") # para trabajar con datos vectoriales y rgee depende de sf
+install.packages("raster") # para trabajar con datos raster.
+install.packages("mapedit") #para trabajar con mapas interactivos.
+install.packages("tmap") # para generar mapas temáticos.
+```
+
+#### Paquetes para trabajo con GEE
+
+Ahora es necesario tener instaldo _gcloud_ para poderr autenticarse con GEE. Para instalarlo seguir las intrucciones de esta página:
+
+https://cloud.google.com/sdk/docs/install
+
+Luego utilizaremos el paquete **rgee**. Para instalarlo desde GitHub ejecutar este código de R en la consola de RStudio:
+
+`remotes::install_github("r-spatial/rgee")`
+
+Si el código anterior te da error puede ser que necesites instalar la librería **remotes**
+
+`install.packages('remotes')`
+
+y luego puedas ejecutar `remotes::install_github('r-spatial/rgee')` sin problemas.
+
+Es necesario instalar miniconda para que **rgee** funcione. La función `ee_intall()` se encarga de esta tarea.  Se ejecuta solamente una vez.
+
+```{r eval=FALSE}
+library(rgee)  # cargamos el paquete rgee
+ee_install() # pedimos que instale miniconda
+
+# Inicializar Earth Engine! (vamos a necesitar tener nuestro usuario habilitado)
+ee_Initialize()
+```
+
+Adicionalmente, si tuviste algún problema durante la instalación estas funciones pueden ser útiles para comprobar el estado de las dependencias de rgee y eliminar las credenciales. 
+
+```{r eval=FALSE}
+ee_check() # Verifica las dependencias que no son de R
+ee_clean_credentials() # Eliminar credenciales de un usuario específico
+ee_clean_pyenv() # Eliminar variables del sistema
+```
+
+### Agenda
+
+Este es un cronograma tentativo. 
+
+#### Mañana
+
+|Duración |Temas|
+|:---|:----------|
+|55 minutos | [Flujo de trabajo reproducible](01-introduction.html) |
+|5 minutos | Pausa |
+|55 minutos | [El ecosistema espacial](02-r-spatial.html) |
+|5  minutos | Pausa |
+|55 minutos | [Leyendo](03-leyendo-datos.html) y [graficando](04-graficando.html) datos|
+|5 minutos | Preguntas y cierre primera parte|
+
+
+#### Tarde
+
+Este es un cronograma tentativo. 
+
+|Duración |Temas|
+|:---|:----------|
+|55 minutos | [Manipulacion de datos](05-manipulacion.html) |
+|5 minutos | Pausa |
+|55 minutos | [rgee](06-rgee.html) |
+|5  minutos | Pausa |
+|30 minutos | [Manipulación de datos](04-data-manipulation.html) |
+|20 minutos | [Comunicando tu trabajo](05-reports.html) |
+|10 minutos | Preguntas y cierre |
+
+
+
+## ¿Quién soy? 
+
+**Yanina Bellini Saibene**
+
+<img src="img/yani_circle.png" alt="Foto de Yani" width="100" height="100" align="left" style="margin:10px"/>
+
+__In short:__ 
+
+[rOpenSci](https://ropensci.org/) Community Manager.
+[R-Ladies](https://rladies.org/) Project Lead.
+[UNAB](https://www.unab.edu.ar/) and [UDE](https://www.fca-ude.edu.uy/) professor. 
+
+Co-founder of [MetaDocencia](https://www.metadocencia.org/), [LatinR](https://latin-r.com/), and [R-Ladies Santa Rosa](https://www.meetup.com/es/rladies-santa-rosa/).
+
+Member, [The Carpentries](https://carpentries.org/) Executive Council,  [R-Ladies](https://rladies.org/) R-Ladies Global Team, [RForwards](https://forwards.github.io/) Core Team, [R Consortium Infrastructure Steering Committee](https://www.r-consortium.org/about/governance), [R4DS_ES](https://github.com/cienciadedatos), useR! Working Group, [MiR](https://mircommunity.com), [Sociedad Argentina de Informática (SADIO)](https://www.sadio.org.ar/).
+
+Winner of [CIALP](http://cialp.com.ar/) Technological Innovation Award (2001) and the National e-Government Award (2015 y 2016) for projects related to remote sensing and open data.  
+
+[INTA](https://www.argentina.gob.ar/inta)'s Researcher (on leave). Former MetaDocencia Core Team (2020-2022). 
+
+M.S. in Data Mining and Knowledge Management.
+
+[yabellini.netlify.com](https://yabellini.netlify.com/)
+[\@yabellini](https://twitter.com/yabellini)
+
+
+## Licencia
+
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
+Todo el material de este curso está bajo la licencia <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+Nos inspiramos y basamos en los siguientes recursos:
+
+* [250 ejemplos de uso de rgee](https://csaybar.github.io/rgee-examples/) por Cesar Aybar  
+* [Handbook de rgee](https://github.com/barja8/Handbook_rgee) por Antony Barja 
+* [Getting started with R and R-spatial](https://bakaniko.github.io/foss4g2022-getting-started-rspatial/) por Nicolas Roelandt and Jakub Nowosad
+* [R para Clima](https://eliocamp.github.io/r-clima/index.html) de Elio Campitelli y Paola Corrales.
+* [Ciencia de Datos para el Turismo](https://yabellini.netlify.app/courses/cd_turismo_2021/) por Yanina Bellini Saibene, Paola Corrales y Elio Campitelli
+* [Procesando datos espaciales con R. Utilizando rgee](https://yabellini.netlify.app/courses/rgee_course/) por Yanina Bellini Saibene
+
+
+

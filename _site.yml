@@ -1,0 +1,23 @@
+navbar:
+  title: "Sensoramiento remoto con R aplicado a la agricultura"
+  left: 
+     - text: Temas
+       menu: 
+        - text: Flujo de trabajo reproducible
+          href: 01-introduction.html
+        - text: Ecosistema espacial
+          href: 02-r-spatial.html
+        - text: Tareas básicas
+          href: 03-tareas_basicas.html
+        - text: Clasificación supervisada
+          href: 04-clasificacion_supervisada.html
+  right:
+    - text: Repo
+      href: https://github.com/yabellini/curso_rgee
+output_dir: "docs"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    
