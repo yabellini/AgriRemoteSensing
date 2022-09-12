@@ -1,9 +1,10 @@
 ---
 title: "Flujo de trabajo reproducible"
-output: 
+output:
   html_document:
-    code_download: true
+    code_download: yes
     highlight: tango
+  pdf_document: default
 ---
 
 ## Proceso de análisis de datos
