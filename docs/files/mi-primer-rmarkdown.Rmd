@@ -1,0 +1,25 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(datos)
+```
+
+## Vamos a analizar información sobre diamantes
+
+El paquete `datos` incluye muchas vaces de datos que se usan normalmente en ejemplos o en cursos y talleres para enseñar R. Uno de ellos es es `diamantes`. Veamos un resumen de este data set. 
+
+```{r diamantes}
+summary(diamantes)
+```
+
+## Algunos gráficos
+
+También es interesante graficar estas observaciones para ver la relación entre variables.
+
+```{r pressure, echo=FALSE}
+ggplot(diamantes) +
+  geom_point(aes(quilate, precio))
+```
+
+Si te preguntábas que hace `echo = FALSE` al comienzo del bloque de código, está ahí para no incluir el código de R en el archivo final pero si el plot que genera.

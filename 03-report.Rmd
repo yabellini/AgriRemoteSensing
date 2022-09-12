@@ -254,3 +254,12 @@ Podés revisar la guía rápida de Markdown desde RStudio (en inglés):
 
 Help → Markdown Quick Reference
 :::
+
+## Publicando reportes
+
+Estos reportes se pueden publicar en Internet porque son páginas HTML.  Para hacerlo de forma sencilla podemos utilizar este sitio web:
+
+https://app.netlify.com/drop
+
+Todo lo que necesitamos hacer es subir la carpeta con los archivos HTML,
+PNG, CSS, etc que forman nuestro reporte.

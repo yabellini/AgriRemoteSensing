@@ -1,0 +1,46 @@
+library(readr)
+
+estaciones_smn <- read_csv("datos/estaciones_smn.csv") 
+
+str(estaciones_smn)
+
+-----
+
+library(rnaturalearth)
+
+mapa <- ne_countries(country = c("argentina", "chile", "uruguay", 
+                                                "paraguay", "brazil", "bolivia", 
+                                                "falkland islands"), 
+                                    returnclass = "sf")
+
+
+str(mapa)
+
+
+--- Graficando
+
+library(ggplot2)
+ggplot(data = estaciones_smn, mapping = aes(x = lon, y = lat))
+
+
+ggplot(data = estaciones_smn, mapping = aes(x = lon, y = lat)) +
+  geom_point()  
+
+
+--- Poligonos
+
+ggplot(mapa) +
+  geom_sf()
+
+ggplot(mapa) +
+  geom_sf(fill = NA, color = "black", size = 0.2)
+
+ggplot(mapa) +
+  geom_sf(fill = NA, color = "black", size = 0.2) +
+  geom_point(data = estaciones_smn, mapping = aes(lon, lat)) 
+
+ggplot(mapa) +
+  geom_sf(fill = NA, color = "black", size = 0.2) +
+  geom_point(data = estaciones_smn, mapping = aes(lon, lat)) +
+  coord_sf(ylim = c(-55, -20), xlim = c(-80, -50))
+
